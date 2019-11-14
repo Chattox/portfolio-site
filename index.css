@@ -1,0 +1,29 @@
+/* Icon bar */
+.icon-bar {
+    height: 100%;
+    width: 90px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #555;
+}
+
+.icon-bar a {
+    display: block;
+    text-align: center;
+    padding: 16px;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 36px;
+}
+
+.icon-bar a:hover {
+    background-color: #000;
+}
+
+/* Main body */
+.main {
+    margin-left: 100px;
+    text-align: center;
+}
+
