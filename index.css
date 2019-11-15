@@ -36,6 +36,7 @@ body {
     grid-template-rows: 20% minmax(200px, 500px) auto;
     margin-left: 70px;
     width: 100%;
+    height: 100vh;
 }
 
 .logo {
@@ -81,6 +82,7 @@ body {
     background-color: white;
     height: 100%;
     width: 100%;
+    align-self: baseline;
 }
 
 .main-text p {
