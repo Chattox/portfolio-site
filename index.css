@@ -21,6 +21,10 @@
     background-color: #000;
 }
 
+.active {
+    background-color: #4CAF50;
+}
+
 /* Main body */
 body {
     background-image: url("images/splash.jpg");
