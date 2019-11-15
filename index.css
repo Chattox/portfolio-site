@@ -34,6 +34,7 @@
     background-size: cover;
     overflow-x: hidden;
     max-width: 100%;
+    z-index: 5;
 }
 
 .portfolio {
