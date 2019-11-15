@@ -1,7 +1,7 @@
 /* Icon bar */
 .icon-bar {
     height: 100%;
-    width: 4%;
+    width: 80px;
     position: fixed;
     top: 0;
     left: 0;
@@ -23,7 +23,7 @@
 
 /* Main body */
 .main {
-    margin-left: 100px;
+    margin-left: 80px;
     text-align: center;
 }
 
