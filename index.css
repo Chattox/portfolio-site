@@ -34,6 +34,11 @@
     background-size: cover;
     overflow-x: hidden;
 }
+
+.portfolio {
+    overflow-x: hidden;
+}
+
 .main {
     display: grid;
     grid-template-columns: 100px auto;
@@ -109,6 +114,7 @@ ul {
 .grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, 175px);
+    grid-template-rows: auto;
     grid-column-start: 1;
     grid-column-end: -1;
     grid-row-start: 2;
@@ -124,6 +130,11 @@ ul {
     border-radius: 10px;
     height: 250px;
     transition: all 0.3s ease;
+}
+
+#test-1 {
+    background-image: url(images/slavbot.jpg);
+    background-position: center;
 }
 
 .grid-card:hover {
