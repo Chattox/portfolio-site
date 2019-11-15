@@ -27,3 +27,28 @@
     text-align: center;
 }
 
+h1 {
+    font-family: 'Big Shoulders Text', cursive;
+    font-size: 40px;
+}
+
+h2 {
+    font-family: 'Big Shoulders Text', cursive;
+    font-size: 30px;
+}
+
+h3 {
+    font-family: 'Big Shoulders Text', cursive;
+    font-size: 20px;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+}
+
+ul {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+}
+
