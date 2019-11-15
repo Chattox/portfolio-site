@@ -26,7 +26,7 @@
 }
 
 /* Main body */
-body {
+.home {
     background-image: url("images/splash.jpg");
     background-attachment: fixed;
     background-position: center;
@@ -60,21 +60,6 @@ body {
     grid-row-end: 1;
     margin-top: -10px;
     background-color: white;
-}
-
-.splash-image {
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row-start: 2;
-    grid-row-end: 2;
-    height: 100%;
-    width: 100%;
-}
-
-.splash-image > img {
-    object-fit: cover;
-    width: 100%;
-    max-height: 100%;
 }
 
 .main-text {
@@ -120,3 +105,16 @@ ul {
     font-size: 20px;
 }
 
+/* Portfolio cards */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 175px);
+}
+
+.grid-card {
+    background-color: deeppink;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    height: 200px;
+}
