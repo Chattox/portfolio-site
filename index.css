@@ -23,7 +23,28 @@
 
 /* Main body */
 .main {
+    display: grid;
+    grid-template-columns: 100px auto;
+    grid-template-rows: 20% 25% auto;
     margin-left: 80px;
+}
+
+.logo {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.header-text {
+    grid-column-start: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.main-text {
+    grid-column-start: 2;
+    grid-row-start: 3;
     text-align: center;
 }
 
