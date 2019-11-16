@@ -85,31 +85,37 @@
 
 .main-text p {
     margin-right: 5%;
+    background-color: #fff;
 }
 
 h1 {
     font-family: 'Big Shoulders Text', cursive;
     font-size: 40px;
+    background-color: #fff;
 }
 
 h2 {
     font-family: 'Big Shoulders Text', cursive;
     font-size: 30px;
+    background-color: #fff;
 }
 
 h3 {
     font-family: 'Big Shoulders Text', cursive;
     font-size: 20px;
+    background-color: #fff;
 }
 
 p {
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
+    background-color: #fff;
 }
 
 ul {
     font-family: 'Roboto', sans-serif;
     font-size: 20px;
+    background-color: #fff;
 }
 
 /* Portfolio cards */
