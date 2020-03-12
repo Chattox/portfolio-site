@@ -1,19 +1,30 @@
+body {
+  margin: 0;
+}
+
 .mainContainer {
-  display: flex;
+  display: grid;
+  grid-template-columns: 4% 96%;
+  grid-template-rows: 100vh;
+  grid-template-areas: 'nav main';
+
   flex-direction: row;
   align-items: stretch;
   flex-grow: 1;
   height: 100%;
   width: 100%;
+  position: absolute;
 }
 
 /* Sidebar */
 
 .sidebar {
-  display: flex;
   flex-direction: column;
   background-color: #555;
-  height: 100vh;
+  /* height: 100%; */
+  text-align: center;
+  grid-area: nav;
+  width: ;
 }
 
 .sidebar a {
@@ -38,10 +49,11 @@
 .mainBody {
   display: flex;
   flex-direction: column;
+  grid-area: main;
 }
 
 .mainBody > div {
-  flex: 1;
+  /* flex: 1; */
 }
 
 .header {
@@ -58,6 +70,17 @@
 
 .splash {
   display: flex;
+  height: 30%;
+  width: 100%;
+  background-image: url('./images/splash.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.splash > img {
+  flex-wrap: wrap;
 }
 
 .bodyText {
