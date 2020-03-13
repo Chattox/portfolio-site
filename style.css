@@ -4,7 +4,7 @@ body {
 
 .mainContainer {
   display: grid;
-  grid-template-columns: 4% 96%;
+  grid-template-columns: auto 1fr;
   grid-template-rows: 100vh;
   grid-template-areas: 'nav main';
 
@@ -21,10 +21,9 @@ body {
 .sidebar {
   flex-direction: column;
   background-color: #555;
-  /* height: 100%; */
   text-align: center;
   grid-area: nav;
-  width: ;
+  width: auto;
 }
 
 .sidebar a {
@@ -70,7 +69,7 @@ body {
 
 .splash {
   display: flex;
-  height: 30%;
+  height: 500px;
   width: 100%;
   background-image: url('./images/splash.jpg');
   background-attachment: fixed;
@@ -85,6 +84,9 @@ body {
 
 .bodyText {
   display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 10px;
 }
 
 h1 {
@@ -92,7 +94,37 @@ h1 {
   font-size: 40px;
 }
 
+h2 {
+  font-family: 'Big Shoulders Text', cursive;
+  font-size: 30px;
+}
+
 h3 {
   font-family: 'Big Shoulders Text', cursive;
   font-size: 20px;
+}
+
+p, ul{
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  list-style-type: none;
+}
+
+@media only screen and (max-width: 375px) {
+  .mainContainer {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    grid-template-areas: 'nav main';
+  
+    flex-direction: row;
+    align-items: stretch;
+    flex-grow: 1;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+  }
+
+  .splash {
+    display: none;
+  }
 }
