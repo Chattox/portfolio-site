@@ -176,3 +176,14 @@ ul {
   background-image: url(images/slavbot.jpg);
   background-position: center;
 }
+
+#nc-news {
+  background-image: url(images/nc-news.png);
+  background-position: center;
+}
+
+#helpinghand {
+  background-image: url(images/helpinghand-logo.png);
+  background-position: center;
+  background-size: cover;
+}
