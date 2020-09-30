@@ -10,5 +10,18 @@
 }
 
 .nav-item {
-  padding: 1rem;
+  padding: 1rem 0 1rem 0;
+  transition: 500ms;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+}
+
+a {
+  text-decoration: none;
+}
+
+.nav-item:hover {
+  background-color: #000;
+  transition: 300ms;
 }

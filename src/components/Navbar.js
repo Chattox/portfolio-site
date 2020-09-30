@@ -4,13 +4,29 @@ import * as FaIcons from 'react-icons/fa';
 import { IconContext } from 'react-icons';
 
 function Navbar() {
+  const iconSize = '2.5rem';
   return (
     <div className="navbar">
       <div className="nav-item">
-        <IconContext.Provider value={{ size: '3rem' }}>
+        <IconContext.Provider value={{ size: iconSize }}>
           <FaIcons.FaPowerOff />
         </IconContext.Provider>
       </div>
+      <a href="mailto:conradlineker@gmail.com" className="nav-item">
+        <IconContext.Provider value={{ size: iconSize }}>
+          <FaIcons.FaRegEnvelope />
+        </IconContext.Provider>
+      </a>
+      <a href="https://github.com/chattox" className="nav-item">
+        <IconContext.Provider value={{ size: iconSize }}>
+          <FaIcons.FaGithub />
+        </IconContext.Provider>
+      </a>
+      <a href="https://linkedin.com/in/chattox" className="nav-item">
+        <IconContext.Provider value={{ size: iconSize }}>
+          <FaIcons.FaLinkedinIn />
+        </IconContext.Provider>
+      </a>
     </div>
   );
 }
