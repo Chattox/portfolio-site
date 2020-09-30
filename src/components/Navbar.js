@@ -5,6 +5,7 @@ import { IconContext } from 'react-icons';
 
 function Navbar() {
   const iconSize = '2.5rem';
+
   return (
     <div className="navbar">
       <div className="nav-item">

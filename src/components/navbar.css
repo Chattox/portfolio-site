@@ -2,10 +2,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #555;
+  background-color: #16213e;
   height: 100vh;
   width: 4rem;
-  color: #fff;
   font-size: 4rem;
 }
 
@@ -14,7 +13,7 @@
   transition: 500ms;
   width: 100%;
   text-align: center;
-  color: #fff;
+  color: #e94560;
 }
 
 a {
@@ -22,6 +21,6 @@ a {
 }
 
 .nav-item:hover {
-  background-color: #000;
+  background-color: #0f3460;
   transition: 300ms;
 }
