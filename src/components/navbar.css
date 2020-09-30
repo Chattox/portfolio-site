@@ -1,0 +1,14 @@
+.navbar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #555;
+  height: 100vh;
+  width: 4rem;
+  color: #fff;
+  font-size: 4rem;
+}
+
+.nav-item {
+  padding: 1rem;
+}
