@@ -7,8 +7,6 @@ import { func } from 'prop-types';
 const Navbar = ({ togglePortfolio }) => {
   const iconSize = '2.5rem';
 
-  console.log(togglePortfolio);
-
   return (
     <div className="navbar">
       <div className="nav-item" onClick={togglePortfolio}>
