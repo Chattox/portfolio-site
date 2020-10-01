@@ -10,8 +10,17 @@
   overflow: auto;
 }
 
+.logo {
+  margin: 1rem;
+}
+
+.logo g {
+  fill: #e94560;
+}
+
 header {
   text-align: left;
+  display: flex;
 }
 
 h1,
