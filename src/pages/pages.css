@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Big+Shoulders+Text|Roboto&display=swap');
 
+.main,
 .about,
 .portfolio {
   background-color: #1a1a2e;

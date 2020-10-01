@@ -5,10 +5,6 @@ import { Parallax } from 'react-parallax';
 const About = () => {
   return (
     <div className="about">
-      <header>
-        <h1>Conrad Lineker-Jones</h1>
-        <h2>Portfolio</h2>
-      </header>
       <Parallax
         blur={0}
         bgImageStyle={{ width: '100vw', opacity: 0.5 }}
