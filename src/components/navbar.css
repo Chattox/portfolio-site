@@ -3,9 +3,10 @@
   flex-direction: column;
   align-items: center;
   background-color: #16213e;
-  height: 100vh;
+  height: 100%;
   width: 4rem;
   font-size: 4rem;
+  flex-grow: 1;
 }
 
 .nav-item {

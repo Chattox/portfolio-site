@@ -1,6 +1,44 @@
+@import url('https://fonts.googleapis.com/css?family=Big+Shoulders+Text|Roboto&display=swap');
+
 .about,
 .portfolio {
   background-color: #1a1a2e;
   color: #fcdab7;
   width: 100%;
+  text-align: center;
+  overflow: auto;
+}
+
+header {
+  text-align: left;
+}
+
+h1,
+h2 {
+  font-family: 'Big Shoulders Text', cursive;
+  padding: 1rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+p,
+ul {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  list-style-type: none;
+  padding: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+@media only screen and (max-width: 375px) {
+  p,
+  ul {
+    text-align: left;
+  }
 }

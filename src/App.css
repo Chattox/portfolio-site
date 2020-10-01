@@ -10,4 +10,7 @@
 
 .App {
   display: flex;
+  min-height: 100vh;
+  height: 100%;
+  background-color: #16213e;
 }
