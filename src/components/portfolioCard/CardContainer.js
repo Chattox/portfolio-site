@@ -1,23 +1,40 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './card.css';
+import ReactCardFlip from 'react-card-flip';
 import CardFront from './CardFront';
 import CardBack from './CardBack';
-import slavbot from '../../images/cards/slavbot.jpg';
 
-const PortfolioCard = ({ title, bgImage, description, link }) => {
+const CardContainer = ({ title, bgImage, description, link }) => {
+  const [isFlipped, setIsFlipped] = useState(false);
+
+  const flip = () => {
+    setIsFlipped(!isFlipped);
+  };
+
   return (
-    <div
-      className="card"
-      style={{
-        backgroundImage: `url(${slavbot})`,
-        backgroundPosition: 'center',
-        backgroundSize: 'cover',
-      }}
-    >
-      {/* <CardFront title={title} /> */}
-      <CardBack description={description} link={link} />
+    <div className="card">
+      <ReactCardFlip isFlipped={isFlipped}>
+        <CardFront title={title} bgImage={bgImage} flip={flip} key="front" />
+        <CardBack
+          description={description}
+          link={link}
+          flip={flip}
+          key="back"
+        />
+      </ReactCardFlip>
     </div>
+    // <div
+    //   className="card"
+    //   style={{
+    //     backgroundImage: `url(${slavbot})`,
+    //     backgroundPosition: 'center',
+    //     backgroundSize: 'cover',
+    //   }}
+    // >
+    //   {/* <CardFront title={title} /> */}
+    //   <CardBack description={description} link={link} />
+    // </div>
   );
 };
 
-export default PortfolioCard;
+export default CardContainer;

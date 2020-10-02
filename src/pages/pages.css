@@ -8,6 +8,14 @@
   width: 100%;
   text-align: center;
   overflow: auto;
+  display: block;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  /* justify-content: center; */
 }
 
 .logo {

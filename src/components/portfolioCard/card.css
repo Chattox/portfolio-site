@@ -1,17 +1,21 @@
 .card {
-  background-color: deeppink;
   border-radius: 10px;
   height: 15rem;
   width: 10rem;
   margin: 1rem;
   align-items: center;
-  justify-content: center;
   display: flex;
-  box-shadow: 0 5px 10px -5px #e94560;
+  flex-direction: column;
+}
+
+.content {
+  margin: 0;
+  background-color: #0f3460;
+  align-items: flex-start;
 }
 
 .title {
-  margin-top: -100%;
+  margin-top: 20%;
   background-color: #0f3460;
   width: 100%;
   box-shadow: 0 5px 10px -5px #000;
@@ -19,11 +23,13 @@
 
 .description {
   background-color: #0f3460;
-  height: 100%;
-  width: 100%;
   border-radius: 10px;
   padding: 1rem 0.5rem;
   text-align: left;
+}
+
+.gitLink {
+  margin-top: 1.5rem;
 }
 
 a {
@@ -31,4 +37,10 @@ a {
   width: 100%;
   text-decoration: none;
   color: inherit;
+  transition: 300ms;
+}
+
+a:hover {
+  color: #e94560;
+  transition: 300ms;
 }

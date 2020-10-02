@@ -1,18 +1,23 @@
 import React from 'react';
 import './pages.css';
 import CardContainer from '../components/portfolioCard/CardContainer';
+import cardData from '../components/portfolioCard/cardData';
 
 const Portfolio = () => {
   return (
     <div className="portfolio">
-      This is my port where I keep my folios
-      <CardContainer
-        title="this"
-        bgImage="is"
-        description="A modular, lightweight Discord bot with an easily expandable command
-      structure"
-        link="https://github.com/Chattox/slavbot_v3"
-      />
+      <div className="container">
+        {cardData.map((card) => {
+          return (
+            <CardContainer
+              title={card.title}
+              bgImage={card.bgImage}
+              description={card.description}
+              link={card.link}
+            />
+          );
+        })}
+      </div>
     </div>
   );
 };
