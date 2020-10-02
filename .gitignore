@@ -1,2 +1,5 @@
 images/logo.png
 old.*
+/.vscode
+/build
+/node_modules
