@@ -1,6 +1,7 @@
 import React from 'react';
 import './card.css';
 import CardFront from './CardFront';
+import CardBack from './CardBack';
 import slavbot from '../../images/cards/slavbot.jpg';
 
 const PortfolioCard = ({ title, bgImage, description, link }) => {
@@ -13,7 +14,8 @@ const PortfolioCard = ({ title, bgImage, description, link }) => {
         backgroundSize: 'cover',
       }}
     >
-      <CardFront title={title} />
+      {/* <CardFront title={title} /> */}
+      <CardBack description={description} link={link} />
     </div>
   );
 };

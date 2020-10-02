@@ -9,8 +9,9 @@ const Portfolio = () => {
       <CardContainer
         title="this"
         bgImage="is"
-        description="my"
-        link="portfolio"
+        description="A modular, lightweight Discord bot with an easily expandable command
+      structure"
+        link="https://github.com/Chattox/slavbot_v3"
       />
     </div>
   );
