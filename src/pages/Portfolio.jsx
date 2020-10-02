@@ -1,12 +1,12 @@
 import React from 'react';
 import './pages.css';
-import PortfolioCard from '../components/PortfolioCard';
+import CardContainer from '../components/portfolioCard/CardContainer';
 
 const Portfolio = () => {
   return (
     <div className="portfolio">
       This is my port where I keep my folios
-      <PortfolioCard
+      <CardContainer
         title="this"
         bgImage="is"
         description="my"
