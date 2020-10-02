@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/static/css/main.3ca2197e.chunk.css",
+    "main.js": "/static/js/main.c2100554.chunk.js",
+    "main.js.map": "/static/js/main.c2100554.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.fdaf22cd.js",
+    "runtime-main.js.map": "/static/js/runtime-main.fdaf22cd.js.map",
+    "static/js/2.20fea808.chunk.js": "/static/js/2.20fea808.chunk.js",
+    "static/js/2.20fea808.chunk.js.map": "/static/js/2.20fea808.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.ebc0021b066bb2c8f03687765673e54a.js": "/precache-manifest.ebc0021b066bb2c8f03687765673e54a.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.3ca2197e.chunk.css.map": "/static/css/main.3ca2197e.chunk.css.map",
+    "static/js/2.20fea808.chunk.js.LICENSE.txt": "/static/js/2.20fea808.chunk.js.LICENSE.txt",
+    "static/media/helpinghand-logo.png": "/static/media/helpinghand-logo.7f1afa80.png",
+    "static/media/logoIcon.0b221eca.svg": "/static/media/logoIcon.0b221eca.svg",
+    "static/media/slavbot.jpg": "/static/media/slavbot.ad081e64.jpg",
+    "static/media/splash.jpg": "/static/media/splash.b7ac7d38.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.fdaf22cd.js",
+    "static/js/2.20fea808.chunk.js",
+    "static/css/main.3ca2197e.chunk.css",
+    "static/js/main.c2100554.chunk.js"
+  ]
+}
