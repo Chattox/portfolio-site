@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 import './card.css';
-import * as FaIcons from 'react-icons/fa';
-import { IconContext } from 'react-icons/lib';
 
-const CardBack = ({ description, link, flip }) => {
+const CardBack = ({ description, link, icon, flip }) => {
   const [isLinkHover, setIsLinkHover] = useState(false);
 
   const handleClick = () => {
@@ -27,9 +25,10 @@ const CardBack = ({ description, link, flip }) => {
         onMouseEnter={handleHover}
         onMouseLeave={handleHover}
       >
-        <IconContext.Provider value={{ size: '4rem' }}>
+        {icon}
+        {/* <IconContext.Provider value={{ size: '4rem' }}>
           <FaIcons.FaGithub />
-        </IconContext.Provider>
+        </IconContext.Provider> */}
       </a>
     </div>
   );

@@ -14,6 +14,7 @@ const Portfolio = () => {
               bgImage={card.bgImage}
               description={card.description}
               link={card.link}
+              icon={card.icon}
             />
           );
         })}
