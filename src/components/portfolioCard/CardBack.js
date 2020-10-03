@@ -26,9 +26,6 @@ const CardBack = ({ description, link, icon, flip }) => {
         onMouseLeave={handleHover}
       >
         {icon}
-        {/* <IconContext.Provider value={{ size: '4rem' }}>
-          <FaIcons.FaGithub />
-        </IconContext.Provider> */}
       </a>
     </div>
   );

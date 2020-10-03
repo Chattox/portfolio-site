@@ -24,17 +24,6 @@ const CardContainer = ({ title, bgImage, description, link, icon }) => {
         />
       </ReactCardFlip>
     </div>
-    // <div
-    //   className="card"
-    //   style={{
-    //     backgroundImage: `url(${slavbot})`,
-    //     backgroundPosition: 'center',
-    //     backgroundSize: 'cover',
-    //   }}
-    // >
-    //   {/* <CardFront title={title} /> */}
-    //   <CardBack description={description} link={link} />
-    // </div>
   );
 };
 
