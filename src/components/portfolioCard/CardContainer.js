@@ -4,7 +4,7 @@ import ReactCardFlip from 'react-card-flip';
 import CardFront from './CardFront';
 import CardBack from './CardBack';
 
-const CardContainer = ({ title, bgImage, description, link }) => {
+const CardContainer = ({ title, bgImage, description, link, icon }) => {
   const [isFlipped, setIsFlipped] = useState(false);
 
   const flip = () => {
@@ -18,6 +18,7 @@ const CardContainer = ({ title, bgImage, description, link }) => {
         <CardBack
           description={description}
           link={link}
+          icon={icon}
           flip={flip}
           key="back"
         />
