@@ -18,8 +18,7 @@ const About = () => {
         <h1>TL;DR</h1>
         <p>
           I am a driven, quick learning, junior software developer currently
-          working with C#, JavaScript, React, and MySQL amongst various other
-          technologies. My diverse background across a wide range of problem
+          working with C#.NET as a back-end engineer. My diverse background across a wide range of problem
           solving situations and long history working with computers allows me
           to approach issues in an effective and practical manner.
         </p>
