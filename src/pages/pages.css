@@ -59,6 +59,16 @@ ul {
   margin-bottom: 2rem;
 }
 
+.about a {
+  color: #e94560;
+  text-decoration: none;
+}
+
+.about a:hover {
+  color: #f6b5bf;
+  transition: all 300ms ease-in-out;
+}
+
 @media only screen and (max-width: 375px) {
   p,
   ul {
