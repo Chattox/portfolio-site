@@ -2,6 +2,7 @@ import React from 'react';
 import helpingHand from '../../images/cards/helpinghand-logo.png';
 import slavbot from '../../images/cards/slavbot.jpg';
 import ncNews from '../../images/cards/nc-news.png';
+import raddle from '../../images/cards/raddle.jpg';
 import * as FaIcons from 'react-icons/fa';
 import { IconContext } from 'react-icons/lib';
 
@@ -22,6 +23,14 @@ const youtubeIcon = () => {
 };
 
 export default [
+  {
+    title: 'Raddle',
+    bgImage: `url(${raddle})`,
+    link: 'https://github.com/Chattox/raddle',
+    description:
+      'A Wordle clone built in react, because all the cool kids are doing it these days',
+    icon: githubIcon(),
+  },
   {
     title: 'Helping Hand',
     bgImage: `url(${helpingHand})`,
