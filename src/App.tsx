@@ -1,26 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {
+  MantineProvider,
+  createStyles,
+  Title,
+  Text,
+  Container,
+} from '@mantine/core';
+import { lightTheme, darkTheme } from './themes';
 
-function App() {
+const useStyles = createStyles((theme) => ({
+  'text-body': {
+    textAlign: 'center',
+  },
+}));
+
+export default function App() {
+  const { classes } = useStyles();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <MantineProvider theme={lightTheme} withGlobalStyles withNormalizeCSS>
+      <Container className={classes['text-body']} fluid={true}>
+        <Title order={1}>Conrad Lineker-Jones</Title>
+        <Text>
+          Junior front-end developer at{' '}
+          <a href="https://amplience.com">Amplience</a> since 2021
+        </Text>
+      </Container>
+    </MantineProvider>
   );
 }
-
-export default App;
