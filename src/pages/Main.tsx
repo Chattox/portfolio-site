@@ -1,4 +1,6 @@
-import { Container, Title, Tabs, createStyles } from '@mantine/core';
+import { Container, Title, Tabs, createStyles, Group } from '@mantine/core';
+
+import { ThemeSwitcher } from '../components/ThemeSwitcher';
 
 import { About } from './content/About';
 import { Portfolio } from './content/Portfolio';
@@ -13,7 +15,10 @@ export const Main = () => {
   const { classes } = useStyles();
   return (
     <Container fluid={true} className={classes.mainContainer}>
-      <Title order={1}>Conrad Lineker-Jones</Title>
+      <Group>
+        <Title order={1}>Conrad Lineker-Jones</Title>
+        <ThemeSwitcher />
+      </Group>
       <Tabs defaultValue="about">
         <Tabs.List>
           <Tabs.Tab value="about">About</Tabs.Tab>
