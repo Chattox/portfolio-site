@@ -1,13 +1,9 @@
-import { createStyles, Switch, useMantineColorScheme } from '@mantine/core';
+import { ActionIcon, createStyles, useMantineColorScheme } from '@mantine/core';
 import { IconSunFilled, IconMoonFilled } from '@tabler/icons-react';
-import { useState } from 'react';
 
-const useStyles = createStyles((theme) => ({
-  sunIcon: {
-    color: theme.colors.yellow[4],
-  },
-  moonIcon: {
-    color: theme.colors.blue[6],
+const useStyles = createStyles(() => ({
+  switcher: {
+    margin: '16px',
   },
 }));
 
@@ -15,24 +11,15 @@ export const ThemeSwitcher = () => {
   const { colorScheme, toggleColorScheme } = useMantineColorScheme();
   const { classes } = useStyles();
 
-  const [checked, setChecked] = useState(false);
-
   return (
-    <Switch
-      checked={checked}
+    <ActionIcon
       size="xl"
-      onChange={(e) => {
-        setChecked(e.currentTarget.checked);
-        toggleColorScheme();
-      }}
-      color={colorScheme === 'dark' ? 'gray' : 'dark'}
-      thumbIcon={
-        checked ? (
-          <IconMoonFilled size="1rem" stroke={2.5} className={classes.moonIcon} />
-        ) : (
-          <IconSunFilled size="1rem" stroke={2.5} className={classes.sunIcon} />
-        )
-      }
-    />
+      variant="outline"
+      onClick={() => toggleColorScheme()}
+      className={classes.switcher}
+      color={colorScheme === 'dark' ? 'yellow.4' : 'blue.6'}
+    >
+      {colorScheme === 'dark' ? <IconSunFilled stroke={2.5} /> : <IconMoonFilled stroke={2.5} />}
+    </ActionIcon>
   );
 };
