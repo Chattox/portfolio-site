@@ -1,4 +1,6 @@
-import { Container, Title, Tabs, createStyles } from '@mantine/core';
+import { Container, Title, Tabs, createStyles, Group } from '@mantine/core';
+
+import { ThemeSwitcher } from '../components/ThemeSwitcher';
 
 import { About } from './content/About';
 import { Portfolio } from './content/Portfolio';
@@ -7,13 +9,21 @@ const useStyles = createStyles(() => ({
   mainContainer: {
     padding: '0',
   },
+  title: {
+    padding: '16px',
+  },
 }));
 
 export const Main = () => {
   const { classes } = useStyles();
   return (
     <Container fluid={true} className={classes.mainContainer}>
-      <Title order={1}>Conrad Lineker-Jones</Title>
+      <Group position="apart">
+        <Title order={1} size="60" inline={true} className={classes.title}>
+          Conrad Lineker-Jones
+        </Title>
+        <ThemeSwitcher />
+      </Group>
       <Tabs defaultValue="about">
         <Tabs.List>
           <Tabs.Tab value="about">About</Tabs.Tab>
