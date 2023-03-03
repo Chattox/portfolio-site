@@ -3,6 +3,8 @@ import { Container, Title, Tabs, createStyles, Group } from '@mantine/core';
 import { ThemeSwitcher } from '../components/ThemeSwitcher';
 
 import { About } from './content/About';
+import { Contact } from './content/Contact';
+import { Experience } from './content/Experience';
 import { Portfolio } from './content/Portfolio';
 
 const useStyles = createStyles(() => ({
@@ -27,15 +29,25 @@ export const Main = () => {
       <Tabs defaultValue="about">
         <Tabs.List>
           <Tabs.Tab value="about">About</Tabs.Tab>
+          <Tabs.Tab value="experience">Experience</Tabs.Tab>
           <Tabs.Tab value="portfolio">Portfolio</Tabs.Tab>
+          <Tabs.Tab value="contact">Contact</Tabs.Tab>
         </Tabs.List>
 
         <Tabs.Panel value="about">
           <About />
         </Tabs.Panel>
 
+        <Tabs.Panel value="experience">
+          <Experience />
+        </Tabs.Panel>
+
         <Tabs.Panel value="portfolio">
           <Portfolio />
+        </Tabs.Panel>
+
+        <Tabs.Panel value="contact">
+          <Contact />
         </Tabs.Panel>
       </Tabs>
     </Container>
