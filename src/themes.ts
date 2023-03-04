@@ -4,9 +4,13 @@ export const lightTheme: MantineThemeOverride = {
   fontFamily: 'Open Sans, sans-serif',
   headings: { fontFamily: 'Poppins, sans-serif'},
   colorScheme: 'light',
+  primaryColor: 'blue',
+  primaryShade: 4
 }
 
 export const darkTheme: MantineThemeOverride = {
   ...lightTheme,
-  colorScheme: 'dark'
+  colorScheme: 'dark',
+  primaryColor: 'pink',
+  primaryShade: 6
 }
