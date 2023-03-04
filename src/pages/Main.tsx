@@ -3,9 +3,9 @@ import { Container, Title, Tabs, createStyles, Group } from '@mantine/core';
 import { ThemeSwitcher } from '../components/ThemeSwitcher';
 
 import { About } from './content/About';
-import { Contact } from './content/Contact';
 import { Experience } from './content/Experience';
 import { Portfolio } from './content/Portfolio';
+import { Contact } from './content/Contact';
 
 const useStyles = createStyles(() => ({
   mainContainer: {
