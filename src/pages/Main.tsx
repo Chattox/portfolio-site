@@ -14,6 +14,10 @@ const useStyles = createStyles(() => ({
   title: {
     padding: '16px',
   },
+  tab: {
+    // fix for tab bottom borders not transitioning properly for some reason
+    transition: 'border-bottom-color 0.3s',
+  },
 }));
 
 export const Main = () => {
@@ -27,7 +31,7 @@ export const Main = () => {
         <ThemeSwitcher />
       </Group>
       <Tabs defaultValue="about">
-        <Tabs.List>
+        <Tabs.List className={classes.tab}>
           <Tabs.Tab value="about">About</Tabs.Tab>
           <Tabs.Tab value="experience">Experience</Tabs.Tab>
           <Tabs.Tab value="portfolio">Portfolio</Tabs.Tab>
