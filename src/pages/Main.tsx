@@ -24,7 +24,7 @@ export const Main = () => {
   return (
     <Container fluid={true} className={classes.mainContainer}>
       <Group position="apart">
-        <Title order={1} size="60" inline={true} className={classes.title}>
+        <Title order={1} size="60" inline={true} className={classes.title} data-testid="header">
           Conrad Lineker-Jones
         </Title>
         <ThemeSwitcher />
