@@ -5,7 +5,6 @@ import { ThemeSwitcher } from '../components/ThemeSwitcher';
 import { About } from './content/About';
 import { Experience } from './content/Experience';
 import { Portfolio } from './content/Portfolio';
-import { Contact } from './content/Contact';
 
 const useStyles = createStyles(() => ({
   mainContainer: {
@@ -35,7 +34,6 @@ export const Main = () => {
           <Tabs.Tab value="about">About</Tabs.Tab>
           <Tabs.Tab value="experience">Experience</Tabs.Tab>
           <Tabs.Tab value="portfolio">Portfolio</Tabs.Tab>
-          <Tabs.Tab value="contact">Contact</Tabs.Tab>
         </Tabs.List>
 
         <Tabs.Panel value="about">
@@ -48,10 +46,6 @@ export const Main = () => {
 
         <Tabs.Panel value="portfolio">
           <Portfolio />
-        </Tabs.Panel>
-
-        <Tabs.Panel value="contact">
-          <Contact />
         </Tabs.Panel>
       </Tabs>
     </Container>

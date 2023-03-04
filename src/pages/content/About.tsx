@@ -1,4 +1,4 @@
-import { Container, createStyles, List, Text, Title } from '@mantine/core';
+import { Container, createStyles, Group, List, Text, Title, Image } from '@mantine/core';
 import { ParallaxBanner } from 'react-scroll-parallax';
 
 const useStyles = createStyles(() => ({
@@ -9,20 +9,24 @@ const useStyles = createStyles(() => ({
     textAlign: 'center',
     padding: '16px',
   },
-  container: {
-    padding: '0',
+  textContainer: {
+    margin: '0',
   },
 }));
 
 export const About = () => {
   const { classes } = useStyles();
   return (
-    <Container fluid={true} className={classes.container}>
-      <ParallaxBanner
-        layers={[{ image: require('../../images/splash.jpg'), speed: -15 }]}
-        className={classes.bgImage}
+    <Group position="left">
+      <Image
+        src={require('../../images/rad-face.jpg')}
+        withPlaceholder
+        maw={240}
+        mx="auto"
+        radius={120}
+        alt="It me"
       />
-      <Container fluid={true}>
+      <Container className={classes.textContainer}>
         <Title order={1} className={classes.text}>
           TL;DR
         </Title>
@@ -63,6 +67,6 @@ export const About = () => {
           </List.Item>
         </List>
       </Container>
-    </Container>
+    </Group>
   );
 };
