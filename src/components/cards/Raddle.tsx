@@ -1,20 +1,40 @@
-import { ActionIcon, Card, Center, Image, Text, Title } from '@mantine/core';
+import {
+  ActionIcon,
+  Card,
+  Center,
+  Text,
+  Title,
+  BackgroundImage,
+  Badge,
+  Flex,
+  Stack,
+} from '@mantine/core';
 import { motion } from 'framer-motion';
 import { IconBrandGithub } from '@tabler/icons-react';
+
 import { AnimatedButtonWrapper } from '../AnimatedButtonWrapper';
+import { useStyles } from '../cards.styles';
 
 export const Raddle = () => {
+  const { classes, cx } = useStyles();
+
   return (
     <motion.div whileHover={{ y: -10 }}>
       <Card shadow="sm" padding="md" radius="md" maw={'16rem'} withBorder>
         <Card.Section>
-          <Image
+          <BackgroundImage
             src={require('./cardImages/raddle.png')}
-            height={160}
-            alt="Raddle"
-            fit="contain"
-            withPlaceholder
-          />
+            className={cx(classes.cardImage, classes.cardImageContain)}
+            component={Flex}
+            sx={{ backgroundColor: '#FFF' }}
+          >
+            <Stack align="flex-end" justify="flex-end" spacing={3}>
+              <Badge>Webapp</Badge>
+              <Badge>React</Badge>
+              <Badge>JS</Badge>
+              <Badge>Front-end</Badge>
+            </Stack>
+          </BackgroundImage>
         </Card.Section>
         <Title order={2}>Raddle</Title>
         <Text size="sm" color="dimmed">

@@ -1,21 +1,40 @@
-import { ActionIcon, Card, Center, Container, Image, Text, Title } from '@mantine/core';
+import {
+  ActionIcon,
+  Card,
+  Center,
+  Container,
+  Text,
+  Title,
+  BackgroundImage,
+  Badge,
+  Flex,
+  Stack,
+} from '@mantine/core';
 import { motion } from 'framer-motion';
 import { IconBrandGithub } from '@tabler/icons-react';
+
 import { AnimatedButtonWrapper } from '../AnimatedButtonWrapper';
+import { useStyles } from '../cards.styles';
 
 export const SimpleRainbow = () => {
+  const { classes, cx } = useStyles();
+
   return (
     <motion.div whileHover={{ y: -10 }}>
       <Card shadow="sm" padding="md" radius="md" maw={'16rem'} withBorder>
         <Card.Section>
-          <Image
+          <BackgroundImage
             src={require('./cardImages/rainbow-fitbit.png')}
-            height={160}
-            alt="Simple Rainbow"
-            fit="contain"
+            className={cx(classes.cardImage, classes.cardImageContain)}
+            component={Flex}
             sx={{ backgroundColor: '#000' }}
-            withPlaceholder
-          />
+          >
+            <Stack align="flex-end" justify="flex-end" spacing={3}>
+              <Badge>Fitbit</Badge>
+              <Badge>JS</Badge>
+              <Badge>Front-end</Badge>
+            </Stack>
+          </BackgroundImage>
         </Card.Section>
         <Container sx={{ padding: 0 }}>
           <Title order={2}>Simple Rainbow</Title>
