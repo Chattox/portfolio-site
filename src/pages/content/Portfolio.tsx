@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Slavbot } from '../../components/cards/Slavbot';
 import { HelpingHand } from '../../components/cards/HelpingHand';
 import { Raddle } from '../../components/cards/Raddle';
+import { SimpleRainbow } from '../../components/cards/SimpleRainbow';
 
 const useStyles = createStyles(() => ({
   cardContainer: {
@@ -41,6 +42,11 @@ export const Portfolio = () => {
           <Grid.Col span="content">
             <motion.div variants={cardAnim}>
               <Raddle />
+            </motion.div>
+          </Grid.Col>
+          <Grid.Col span="content">
+            <motion.div variants={cardAnim}>
+              <SimpleRainbow />
             </motion.div>
           </Grid.Col>
         </Grid>
