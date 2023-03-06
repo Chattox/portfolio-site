@@ -52,7 +52,7 @@ export const SimpleRainbow = () => {
                 rel="noopener"
               >
                 <ActionIcon size="xl" variant="subtle" color={getColor()}>
-                  <IconBrandGithub size="xl" />
+                  <IconBrandGithub size={48} />
                 </ActionIcon>
               </a>
             </AnimatedButtonWrapper>

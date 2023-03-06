@@ -45,7 +45,7 @@ export const Raddle = () => {
           <AnimatedButtonWrapper>
             <a href="https://github.com/chattox/raddle" target="_blank" rel="noopener">
               <ActionIcon size="xl" variant="subtle" color={getColor()}>
-                <IconBrandGithub size="xl" />
+                <IconBrandGithub size={48} />
               </ActionIcon>
             </a>
           </AnimatedButtonWrapper>

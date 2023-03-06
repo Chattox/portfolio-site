@@ -45,7 +45,7 @@ export const HelpingHand = () => {
           <AnimatedButtonWrapper>
             <a href="https://www.youtube.com/watch?v=0aof27FyHCc" target="_blank" rel="noopener">
               <ActionIcon size="xl" variant="subtle" color={getColor()}>
-                <IconBrandYoutube size="xl" />
+                <IconBrandYoutube size={48} />
               </ActionIcon>
             </a>
           </AnimatedButtonWrapper>

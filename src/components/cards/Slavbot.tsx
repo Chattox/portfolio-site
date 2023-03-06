@@ -44,7 +44,7 @@ export const Slavbot = () => {
             <AnimatedButtonWrapper>
               <a href="https://github.com/chattox/slavbot_v3" target="_blank" rel="noopener">
                 <ActionIcon size="xl" variant="subtle" color={getColor()}>
-                  <IconBrandGithub size="xl" />
+                  <IconBrandGithub size={48} />
                 </ActionIcon>
               </a>
             </AnimatedButtonWrapper>
