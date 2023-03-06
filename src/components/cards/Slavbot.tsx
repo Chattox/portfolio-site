@@ -15,6 +15,7 @@ import { IconBrandGithub } from '@tabler/icons-react';
 
 import { AnimatedButtonWrapper } from '../AnimatedButtonWrapper';
 import { useStyles } from '../cards.styles';
+import { getColor } from '../../utils/getColor';
 
 export const Slavbot = () => {
   const { classes } = useStyles();
@@ -42,7 +43,7 @@ export const Slavbot = () => {
           <Center>
             <AnimatedButtonWrapper>
               <a href="https://github.com/chattox/slavbot_v3" target="_blank" rel="noopener">
-                <ActionIcon size="xl" variant="subtle" color="theme.primaryColor">
+                <ActionIcon size="xl" variant="subtle" color={getColor()}>
                   <IconBrandGithub size="xl" />
                 </ActionIcon>
               </a>

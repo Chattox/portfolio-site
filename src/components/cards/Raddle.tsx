@@ -14,6 +14,7 @@ import { IconBrandGithub } from '@tabler/icons-react';
 
 import { AnimatedButtonWrapper } from '../AnimatedButtonWrapper';
 import { useStyles } from '../cards.styles';
+import { getColor } from '../../utils/getColor';
 
 export const Raddle = () => {
   const { classes, cx } = useStyles();
@@ -43,7 +44,7 @@ export const Raddle = () => {
         <Center>
           <AnimatedButtonWrapper>
             <a href="https://github.com/chattox/raddle" target="_blank" rel="noopener">
-              <ActionIcon size="xl" variant="subtle" color="theme.primaryColor">
+              <ActionIcon size="xl" variant="subtle" color={getColor()}>
                 <IconBrandGithub size="xl" />
               </ActionIcon>
             </a>

@@ -16,6 +16,8 @@ import { IconBrandGithub } from '@tabler/icons-react';
 import { AnimatedButtonWrapper } from '../AnimatedButtonWrapper';
 import { useStyles } from '../cards.styles';
 
+import { getColor } from '../../utils/getColor';
+
 export const SimpleRainbow = () => {
   const { classes, cx } = useStyles();
 
@@ -49,7 +51,7 @@ export const SimpleRainbow = () => {
                 target="_blank"
                 rel="noopener"
               >
-                <ActionIcon size="xl" variant="subtle" color="theme.primaryColor">
+                <ActionIcon size="xl" variant="subtle" color={getColor()}>
                   <IconBrandGithub size="xl" />
                 </ActionIcon>
               </a>

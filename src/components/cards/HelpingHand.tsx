@@ -14,6 +14,7 @@ import { IconBrandYoutube } from '@tabler/icons-react';
 
 import { AnimatedButtonWrapper } from '../AnimatedButtonWrapper';
 import { useStyles } from '../cards.styles';
+import { getColor } from '../../utils/getColor';
 
 export const HelpingHand = () => {
   const { classes, cx } = useStyles();
@@ -43,7 +44,7 @@ export const HelpingHand = () => {
         <Center>
           <AnimatedButtonWrapper>
             <a href="https://www.youtube.com/watch?v=0aof27FyHCc" target="_blank" rel="noopener">
-              <ActionIcon size="xl" variant="subtle" color="theme.primaryColor">
+              <ActionIcon size="xl" variant="subtle" color={getColor()}>
                 <IconBrandYoutube size="xl" />
               </ActionIcon>
             </a>
