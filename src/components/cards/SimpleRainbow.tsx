@@ -14,7 +14,7 @@ import { motion } from 'framer-motion';
 import { IconBrandGithub } from '@tabler/icons-react';
 
 import { AnimatedButtonWrapper } from '../AnimatedButtonWrapper';
-import { useStyles } from '../cards.styles';
+import { useStyles } from './cards.styles';
 
 import { getColor } from '../../utils/getColor';
 

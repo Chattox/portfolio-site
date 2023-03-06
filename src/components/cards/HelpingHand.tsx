@@ -13,7 +13,7 @@ import { motion } from 'framer-motion';
 import { IconBrandYoutube } from '@tabler/icons-react';
 
 import { AnimatedButtonWrapper } from '../AnimatedButtonWrapper';
-import { useStyles } from '../cards.styles';
+import { useStyles } from './cards.styles';
 import { getColor } from '../../utils/getColor';
 
 export const HelpingHand = () => {
