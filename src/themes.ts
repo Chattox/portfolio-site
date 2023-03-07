@@ -12,5 +12,14 @@ export const darkTheme: MantineThemeOverride = {
   ...lightTheme,
   colorScheme: 'dark',
   primaryColor: 'pink',
-  primaryShade: 6
+  primaryShade: 6,
+  components: {
+    Badge: {
+      defaultProps: {
+        sx: {
+            backgroundColor: 'rgba(192,37,92,1)',
+        }
+      }
+    }
+  }
 }
