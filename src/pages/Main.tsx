@@ -29,7 +29,7 @@ export const Main = () => {
         </Title>
         <ThemeSwitcher />
       </Group>
-      <Tabs defaultValue="about">
+      <Tabs defaultValue="about" keepMounted={false}>
         <Tabs.List className={classes.tab}>
           <Tabs.Tab value="about">About</Tabs.Tab>
           <Tabs.Tab value="experience">Experience</Tabs.Tab>
