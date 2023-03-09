@@ -1,4 +1,5 @@
 import { Container, Title, Tabs, createStyles, Group } from '@mantine/core';
+import { useScrollLock } from '@mantine/hooks';
 
 import { ThemeSwitcher } from '../components/ThemeSwitcher';
 
@@ -13,7 +14,10 @@ const useStyles = createStyles(() => ({
   title: {
     padding: '16px',
   },
-  tab: {
+  'tab-container': {
+    width: '100vw',
+  },
+  'tab-list': {
     // fix for tab bottom borders not transitioning properly for some reason
     transition: 'border-bottom-color 0.3s',
   },
@@ -21,16 +25,24 @@ const useStyles = createStyles(() => ({
 
 export const Main = () => {
   const { classes } = useStyles();
+  const [scrollLocked, setScrollLocked] = useScrollLock(false, { disableBodyPadding: true });
+
   return (
-    <Container fluid={true} className={classes.mainContainer}>
+    <Container sx={{ height: '100%' }} fluid={true} className={classes.mainContainer}>
       <Group position="apart">
         <Title order={1} size="60" inline={true} className={classes.title} data-testid="header">
           Conrad Lineker-Jones
         </Title>
         <ThemeSwitcher />
       </Group>
-      <Tabs defaultValue="about" keepMounted={false}>
-        <Tabs.List className={classes.tab}>
+      <Tabs
+        defaultValue="about"
+        keepMounted={false}
+        onTabChange={(tab) => {
+          tab === 'experience' ? setScrollLocked(true) : setScrollLocked(false);
+        }}
+      >
+        <Tabs.List className={classes['tab-list']}>
           <Tabs.Tab value="about">About</Tabs.Tab>
           <Tabs.Tab value="experience">Experience</Tabs.Tab>
           <Tabs.Tab value="portfolio">Portfolio</Tabs.Tab>
