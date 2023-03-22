@@ -1,5 +1,4 @@
 import { Container, Title, Tabs, createStyles, Group } from '@mantine/core';
-import { useScrollLock } from '@mantine/hooks';
 
 import { ThemeSwitcher } from '../components/ThemeSwitcher';
 
@@ -25,7 +24,6 @@ const useStyles = createStyles(() => ({
 
 export const Main = () => {
   const { classes } = useStyles();
-  const [scrollLocked, setScrollLocked] = useScrollLock(false, { disableBodyPadding: true });
 
   return (
     <Container sx={{ height: '100%' }} fluid={true} className={classes.mainContainer}>
@@ -35,13 +33,7 @@ export const Main = () => {
         </Title>
         <ThemeSwitcher />
       </Group>
-      <Tabs
-        defaultValue="about"
-        keepMounted={false}
-        onTabChange={(tab) => {
-          tab === 'experience' ? setScrollLocked(true) : setScrollLocked(false);
-        }}
-      >
+      <Tabs defaultValue="about" keepMounted={false}>
         <Tabs.List className={classes['tab-list']}>
           <Tabs.Tab value="about">About</Tabs.Tab>
           <Tabs.Tab value="experience">Experience</Tabs.Tab>

@@ -1,32 +1,15 @@
-import { useParallax } from 'react-scroll-parallax';
-import {
-  ScrollArea,
-  Title,
-  BackgroundImage,
-  Container,
-  useMantineColorScheme,
-} from '@mantine/core';
+import { Title, Text } from '@mantine/core';
+import { ExperienceBackground } from '../../components/ExperienceBackground';
 
 export const Experience = () => {
-  const parallax = useParallax<HTMLDivElement>({
-    speed: -20,
-  });
-  const { colorScheme } = useMantineColorScheme();
-
   return (
-    <ScrollArea type="hover" h="100vh">
-      <BackgroundImage
-        ref={parallax.ref}
-        src={
-          colorScheme === 'light'
-            ? require('../../images/moon-splash-light.jpg')
-            : require('../../images/moon-splash-dark.jpg')
-        }
-      >
-        <Container h="2828px">
-          <Title>ME SMASH KEYBOARD LONG TIME MAKE COMPUTER THINK</Title>
-        </Container>
-      </BackgroundImage>
-    </ScrollArea>
+    <ExperienceBackground>
+      <Title>ME SMASH KEYBOARD MAKE COMPUTER THINK</Title>
+      <Text sx={{ marginTop: '1000px' }}>BIG MASHY SMASH</Text>
+      <Text sx={{ marginTop: '1000px' }}> MORE SMASH</Text>
+      <Text sx={{ marginTop: '1000px' }}> BUT WAIT</Text>
+      <Text sx={{ marginTop: '1000px' }}> PLOT TWIST</Text>
+      <Text sx={{ marginTop: '1000px', color: 'green' }}> PINK SMASH</Text>
+    </ExperienceBackground>
   );
 };

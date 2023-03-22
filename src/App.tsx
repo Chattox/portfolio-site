@@ -1,5 +1,4 @@
 import { ColorScheme, ColorSchemeProvider, MantineProvider } from '@mantine/core';
-import { ParallaxProvider } from 'react-scroll-parallax';
 import { lightTheme, darkTheme } from './themes';
 
 import { Main } from './pages/Main';
@@ -17,9 +16,7 @@ export default function App() {
         withGlobalStyles
         withNormalizeCSS
       >
-        <ParallaxProvider>
-          <Main />
-        </ParallaxProvider>
+        <Main />
       </MantineProvider>
     </ColorSchemeProvider>
   );
