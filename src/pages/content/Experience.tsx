@@ -1,35 +1,23 @@
+import { Stack } from '@mantine/core';
 import { ExperienceBackground } from '../../components/experience/ExperienceBackground';
-import {
-  ExperienceItem,
-  ExperienceItemProps,
-} from '../../components/experience/ExperienceItem/ExperienceItem';
-
-const expItemData: Array<ExperienceItemProps> = [
-  {
-    side: 'right',
-    title: 'Umami bomb',
-    content: 'Chef speak for "mushroom"',
-  },
-  {
-    side: 'left',
-    title: 'Umami bomb',
-    content: 'Chef speak for "mushroom"',
-  },
-];
+import { ExperienceItem } from '../../components/experience/ExperienceItem/ExperienceItem';
+import { expItemData } from '../../components/experience/ExperienceItem/expItemData';
 
 export const Experience = () => {
   return (
     <ExperienceBackground>
-      {expItemData.map((item) => {
-        return (
-          <ExperienceItem
-            side={item.side}
-            imgSrc={item.imgSrc}
-            title={item.title}
-            content={item.content}
-          />
-        );
-      })}
+      <Stack align="center" justify="flex-start">
+        {expItemData.map((item, i) => {
+          return (
+            <ExperienceItem
+              side={i % 2 === 0 ? 'left' : 'right'}
+              imgSrc={item.imgSrc}
+              title={item.title}
+              content={item.content}
+            />
+          );
+        })}
+      </Stack>
     </ExperienceBackground>
   );
 };
