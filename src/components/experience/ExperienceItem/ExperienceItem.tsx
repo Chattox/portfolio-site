@@ -17,7 +17,7 @@ export const ExperienceItem = ({ side, imgSrc, title, content }: ExperienceItemP
         <Image width={150} height={150} radius="lg" src={imgSrc} withPlaceholder />
       </Grid.Col>
       <Grid.Col order={side === 'left' ? 1 : 2} span="auto">
-        <Stack>
+        <Stack className={classes.textContent}>
           <Title>{title}</Title>
           <Text>{content}</Text>
         </Stack>
