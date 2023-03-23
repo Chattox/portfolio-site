@@ -1,15 +1,35 @@
-import { Title, Text } from '@mantine/core';
-import { ExperienceBackground } from '../../components/ExperienceBackground';
+import { ExperienceBackground } from '../../components/experience/ExperienceBackground';
+import {
+  ExperienceItem,
+  ExperienceItemProps,
+} from '../../components/experience/ExperienceItem/ExperienceItem';
+
+const expItemData: Array<ExperienceItemProps> = [
+  {
+    side: 'right',
+    title: 'Umami bomb',
+    content: 'Chef speak for "mushroom"',
+  },
+  {
+    side: 'left',
+    title: 'Umami bomb',
+    content: 'Chef speak for "mushroom"',
+  },
+];
 
 export const Experience = () => {
   return (
     <ExperienceBackground>
-      <Title>ME SMASH KEYBOARD MAKE COMPUTER THINK</Title>
-      <Text sx={{ marginTop: '1000px' }}>BIG MASHY SMASH</Text>
-      <Text sx={{ marginTop: '1000px' }}> MORE SMASH</Text>
-      <Text sx={{ marginTop: '1000px' }}> BUT WAIT</Text>
-      <Text sx={{ marginTop: '1000px' }}> PLOT TWIST</Text>
-      <Text sx={{ marginTop: '1000px', color: 'green' }}> PINK SMASH</Text>
+      {expItemData.map((item) => {
+        return (
+          <ExperienceItem
+            side={item.side}
+            imgSrc={item.imgSrc}
+            title={item.title}
+            content={item.content}
+          />
+        );
+      })}
     </ExperienceBackground>
   );
 };
