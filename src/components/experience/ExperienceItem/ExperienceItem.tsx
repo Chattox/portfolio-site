@@ -21,9 +21,7 @@ export const ExperienceItem = ({ side, imgSrc, title, content, dates }: Experien
         <Stack className={classes.textContent}>
           <Stack spacing="0.25rem">
             <Title>{title}</Title>
-            <Text c="dimmed" fz="sm">
-              {dates}
-            </Text>
+            <Text className={classes.dateText}>{dates}</Text>
           </Stack>
           <Text>{content}</Text>
         </Stack>

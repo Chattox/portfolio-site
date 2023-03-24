@@ -21,4 +21,8 @@ export const useStyles = createStyles<string, ExperienceStyles>((theme, { side }
   textContent: {
     margin: '16px',
   },
+  dateText: {
+    color: theme.colorScheme === 'light' ? theme.colors.gray[8] : theme.colors.gray[6],
+    fontSize: theme.fontSizes.sm,
+  },
 }));
