@@ -6,9 +6,10 @@ export interface ExperienceItemProps {
   imgSrc?: string;
   title: string;
   content: string;
+  dates: string;
 }
 
-export const ExperienceItem = ({ side, imgSrc, title, content }: ExperienceItemProps) => {
+export const ExperienceItem = ({ side, imgSrc, title, content, dates }: ExperienceItemProps) => {
   const { classes } = useStyles({ side: side });
 
   return (
@@ -18,7 +19,12 @@ export const ExperienceItem = ({ side, imgSrc, title, content }: ExperienceItemP
       </Grid.Col>
       <Grid.Col order={side === 'left' ? 1 : 2} span="auto">
         <Stack className={classes.textContent}>
-          <Title>{title}</Title>
+          <Stack spacing="0.25rem">
+            <Title>{title}</Title>
+            <Text c="dimmed" fz="sm">
+              {dates}
+            </Text>
+          </Stack>
           <Text>{content}</Text>
         </Stack>
       </Grid.Col>

@@ -14,6 +14,7 @@ export const Experience = () => {
               imgSrc={item.imgSrc}
               title={item.title}
               content={item.content}
+              dates={item.dates}
             />
           );
         })}
