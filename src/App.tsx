@@ -1,8 +1,8 @@
 import { ColorScheme, ColorSchemeProvider, MantineProvider } from '@mantine/core';
-import { lightTheme, darkTheme } from './themes';
-
-import { Main } from './pages/Main';
 import { useState } from 'react';
+
+import { lightTheme, darkTheme } from './themes';
+import { Main } from './pages/Main';
 
 export default function App() {
   const [colorScheme, setColorScheme] = useState<ColorScheme>('light');
