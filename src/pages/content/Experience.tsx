@@ -20,6 +20,9 @@ const useStyles = createStyles((theme) => ({
     justifyContent: 'center',
     alignItems: 'center',
   },
+  backgroundIcon: {
+    color: theme.colorScheme === 'light' ? theme.colors.yellow[5] : theme.colors.blue[1],
+  },
 }));
 
 export const Experience = () => {
@@ -39,9 +42,9 @@ export const Experience = () => {
           }}
         >
           {colorScheme === 'light' ? (
-            <IconSunFilled color="yellow" size={150} />
+            <IconSunFilled className={classes.backgroundIcon} size={150} />
           ) : (
-            <IconMoonFilled color="blue" size={150} />
+            <IconMoonFilled className={classes.backgroundIcon} size={150} />
           )}
         </ParallaxLayer>
         {expItemData.map((item, i) => (

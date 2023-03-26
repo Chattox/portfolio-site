@@ -9,7 +9,7 @@ export const useStyles = createStyles<string, ExperienceStyles>((theme, { side }
     width: 750,
     backgroundColor:
       theme.colorScheme === 'light'
-        ? theme.fn.rgba(theme.colors.gray[5], 0.5)
+        ? theme.fn.rgba(theme.colors.gray[3], 0.5)
         : theme.fn.rgba(theme.colors.gray[9], 0.5),
     borderRadius: theme.radius.lg,
     display: 'flex',
