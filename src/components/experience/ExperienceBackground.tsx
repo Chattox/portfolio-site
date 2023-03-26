@@ -1,35 +1,31 @@
 import { createStyles, useMantineColorScheme } from '@mantine/core';
-import { ParallaxBanner } from 'react-scroll-parallax';
+import { Parallax } from 'react-scroll-parallax';
+import { IconSunFilled, IconMoonFilled } from '@tabler/icons-react';
 
-const useStyles = createStyles(() => ({
-  container: {
+const useStyles = createStyles((theme) => ({
+  parallaxContainer: {
     display: 'flex',
+    backgroundColor: theme.colorScheme === 'light' ? theme.colors.blue[3] : theme.colors.indigo[9],
   },
-  fullWidth: {
-    width: '100%',
-    height: '3000px',
+  parallaxItem: {
+    zIndex: 0,
+    color: theme.colorScheme === 'light' ? theme.colors.yellow[5] : theme.colors.blue[0],
+    height: '100%',
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
   },
 }));
 
 export const ExperienceBackground = (props: { children: React.ReactNode }) => {
-  const { classes, cx } = useStyles();
+  const { classes } = useStyles();
   const { colorScheme } = useMantineColorScheme();
   return (
-    <ParallaxBanner
-      layers={[
-        {
-          image:
-            colorScheme === 'light'
-              ? require('../../images/moon-splash-light.jpg')
-              : require('../../images/moon-splash-dark.jpg'),
-          speed: -100,
-        },
-        {
-          children: props.children,
-          speed: 15,
-        },
-      ]}
-      className={cx(classes.container, classes.fullWidth)}
-    />
+    <div className={classes.parallaxContainer}>
+      <Parallax className={classes.parallaxItem} rotate={[-100, 90]}>
+        {colorScheme === 'light' ? <IconSunFilled size={150} /> : <IconMoonFilled size={150} />}
+      </Parallax>
+      {props.children}
+    </div>
   );
 };

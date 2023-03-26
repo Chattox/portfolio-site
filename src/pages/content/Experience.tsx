@@ -6,7 +6,7 @@ import { expItemData } from '../../components/experience/ExperienceItem/expItemD
 export const Experience = () => {
   return (
     <ExperienceBackground>
-      <Stack align="center" justify="flex-start">
+      <Stack align="center" justify="flex-start" sx={{ width: '100%', zIndex: 1 }}>
         {expItemData.map((item, i) => {
           return (
             <ExperienceItem
