@@ -12,11 +12,9 @@ export const useStyles = createStyles<string, ExperienceStyles>((theme, { side }
         ? theme.fn.rgba(theme.colors.gray[5], 0.5)
         : theme.fn.rgba(theme.colors.gray[9], 0.5),
     borderRadius: theme.radius.lg,
-    marginTop: 250,
-    marginRight: '10%',
-    marginBottom: 250,
-    marginLeft: '10%',
-    alignSelf: side === 'left' ? 'flex-start' : 'flex-end',
+    display: 'flex',
+    justifyContent: side === 'left' ? 'flex-start' : 'flex-end',
+    margin: 16,
   },
   textContent: {
     margin: '16px',

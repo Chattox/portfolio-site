@@ -13,7 +13,7 @@ export const ExperienceItem = ({ side, imgSrc, title, content, dates }: Experien
   const { classes } = useStyles({ side: side });
 
   return (
-    <Grid className={classes.expContainer}>
+    <Grid className={classes.expContainer} grow={false}>
       <Grid.Col order={side === 'left' ? 2 : 1} span="content">
         <Image width={150} height={150} radius="lg" src={imgSrc} withPlaceholder />
       </Grid.Col>
