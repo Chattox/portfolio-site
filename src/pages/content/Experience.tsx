@@ -1,4 +1,4 @@
-import { createStyles, useMantineColorScheme } from '@mantine/core';
+import { createStyles, Global, useMantineColorScheme } from '@mantine/core';
 import { Parallax, ParallaxLayer } from '@react-spring/parallax';
 import { IconMoonFilled, IconSunFilled } from '@tabler/icons-react';
 import { ExperienceItem } from '../../components/experience/ExperienceItem/ExperienceItem';
@@ -30,6 +30,7 @@ export const Experience = () => {
   const { colorScheme } = useMantineColorScheme();
   return (
     <div className={classes.background}>
+      <Global styles={() => ({ body: { overflow: 'hidden' } })} />
       <div className={classes.background} />
       <Parallax pages={expItemData.length} style={{ display: 'flex' }}>
         <ParallaxLayer
