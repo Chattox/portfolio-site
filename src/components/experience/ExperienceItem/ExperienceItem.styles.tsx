@@ -15,7 +15,7 @@ export const useStyles = createStyles<string, ExperienceStyles>((theme, { side }
     display: 'flex',
     alignSelf: side === 'left' ? 'flex-start' : 'flex-end',
     marginTop: 250,
-    marginBottom: 250,
+    marginBottom: 350,
     marginLeft: 16,
     marginRight: 16,
     zIndex: 999,
