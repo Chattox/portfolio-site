@@ -1,5 +1,6 @@
 import { Grid, Image, Stack, Text, Title } from '@mantine/core';
-import { useStyles } from './ExperienceItem.styles';
+
+import { useStyles } from './index.styles';
 
 export interface ExperienceItemProps {
   side?: 'left' | 'right';
