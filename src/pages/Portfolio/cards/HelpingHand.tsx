@@ -12,9 +12,9 @@ import {
 import { motion } from 'framer-motion';
 import { IconBrandYoutube } from '@tabler/icons-react';
 
-import { AnimatedButtonWrapper } from '../AnimatedButtonWrapper';
+import { AnimatedButtonWrapper } from '../../../components/AnimatedButtonWrapper';
 import { useStyles } from './cards.styles';
-import { getColor } from '../../utils/getColor';
+import { getColor } from '../../../utils/getColor';
 
 export const HelpingHand = () => {
   const { classes, cx } = useStyles();
@@ -24,7 +24,7 @@ export const HelpingHand = () => {
       <Card shadow="sm" padding="md" radius="md" maw={'16rem'} withBorder>
         <Card.Section>
           <BackgroundImage
-            src={require('./cardImages/helpinghand-logo.png')}
+            src={require('./images/helpinghand-logo.png')}
             className={cx(classes.cardImage, classes.cardImageContain)}
             component={Flex}
             sx={{ backgroundColor: '#66BB6A' }}

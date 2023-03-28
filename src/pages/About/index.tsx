@@ -1,22 +1,8 @@
-import { Container, createStyles, Group, Text, Title, Image, ActionIcon } from '@mantine/core';
+import { Container, Group, Text, Title, Image, ActionIcon } from '@mantine/core';
 import { IconBrandGithub, IconBrandLinkedin, IconMail } from '@tabler/icons-react';
-import { AnimatedButtonWrapper } from '../../components/AnimatedButtonWrapper';
 
-const useStyles = createStyles(() => ({
-  bgImage: {
-    height: '33vh',
-  },
-  text: {
-    textAlign: 'left',
-    padding: '16px',
-  },
-  textContainer: {
-    margin: '25px 0 0 0',
-  },
-  profilePicture: {
-    margin: '25px 0px 25px 50px',
-  },
-}));
+import { useStyles } from './index.styles';
+import { AnimatedButtonWrapper } from '../../components/AnimatedButtonWrapper';
 
 export const About = () => {
   const { classes } = useStyles();
@@ -24,7 +10,7 @@ export const About = () => {
   return (
     <Group position="left" align="start" spacing="10%">
       <Image
-        src={require('../../images/rad-face.jpg')}
+        src={require('./images/rad-face.jpg')}
         withPlaceholder
         maw={240}
         radius={120}

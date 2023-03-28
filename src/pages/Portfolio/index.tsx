@@ -1,15 +1,11 @@
-import { Container, createStyles, Grid } from '@mantine/core';
+import { Container, Grid } from '@mantine/core';
 import { motion } from 'framer-motion';
-import { Slavbot } from '../../components/cards/Slavbot';
-import { HelpingHand } from '../../components/cards/HelpingHand';
-import { Raddle } from '../../components/cards/Raddle';
-import { SimpleRainbow } from '../../components/cards/SimpleRainbow';
 
-const useStyles = createStyles(() => ({
-  cardContainer: {
-    paddingTop: '16px',
-  },
-}));
+import { useStyles } from './index.styles';
+import { Slavbot } from './cards/Slavbot';
+import { HelpingHand } from './cards/HelpingHand';
+import { Raddle } from './cards/Raddle';
+import { SimpleRainbow } from './cards/SimpleRainbow';
 
 const cardAnim = {
   initial: {

@@ -1,28 +1,10 @@
-import { createStyles, Flex, useMantineColorScheme } from '@mantine/core';
+import { Flex, useMantineColorScheme } from '@mantine/core';
 import { motion, useScroll, useSpring, useTransform } from 'framer-motion';
 import { IconMoonFilled, IconSunFilled } from '@tabler/icons-react';
-import { ExperienceItem } from '../../components/experience/ExperienceItem/ExperienceItem';
-import { expItemData } from '../../components/experience/ExperienceItem/expItemData';
 
-const useStyles = createStyles((theme) => ({
-  background: {
-    position: 'absolute',
-    background: theme.colorScheme === 'light' ? theme.colors.blue[3] : theme.colors.indigo[9],
-    width: '100%',
-  },
-  alignCenter: {
-    display: 'flex',
-    alignItems: 'center',
-  },
-  card: {
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  backgroundIcon: {
-    color: theme.colorScheme === 'light' ? theme.colors.yellow[5] : theme.colors.yellow[0],
-  },
-}));
+import { useStyles } from './index.styles';
+import { ExperienceItem } from './ExperienceItem';
+import { expItemData } from './ExperienceItem/expItemData';
 
 export const Experience = () => {
   const { classes } = useStyles();
