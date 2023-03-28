@@ -20,7 +20,7 @@ const useStyles = createStyles((theme) => ({
     alignItems: 'center',
   },
   backgroundIcon: {
-    color: theme.colorScheme === 'light' ? theme.colors.yellow[5] : theme.colors.blue[1],
+    color: theme.colorScheme === 'light' ? theme.colors.yellow[5] : theme.colors.yellow[0],
   },
 }));
 
