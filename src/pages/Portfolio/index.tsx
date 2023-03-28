@@ -1,10 +1,11 @@
 import { Container, Grid } from '@mantine/core';
 import { motion } from 'framer-motion';
+
+import { useStyles } from './index.styles';
 import { Slavbot } from './cards/Slavbot';
 import { HelpingHand } from './cards/HelpingHand';
 import { Raddle } from './cards/Raddle';
 import { SimpleRainbow } from './cards/SimpleRainbow';
-import { useStyles } from './portfolio.styles';
 
 const cardAnim = {
   initial: {

@@ -1,26 +1,10 @@
-import { Container, Title, Tabs, createStyles, Group } from '@mantine/core';
+import { Container, Title, Tabs, Group } from '@mantine/core';
 
+import { useStyles } from './index.styles';
 import { ThemeSwitcher } from '../../components/ThemeSwitcher';
-
 import { About } from '../About';
 import { Experience } from '../Experience';
 import { Portfolio } from '../Portfolio';
-
-const useStyles = createStyles(() => ({
-  mainContainer: {
-    padding: '0',
-  },
-  title: {
-    padding: '16px',
-  },
-  'tab-container': {
-    width: '100vw',
-  },
-  'tab-list': {
-    // fix for tab bottom borders not transitioning properly for some reason
-    transition: 'border-bottom-color 0.3s',
-  },
-}));
 
 export const Main = () => {
   const { classes } = useStyles();
