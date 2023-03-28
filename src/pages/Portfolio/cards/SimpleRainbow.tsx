@@ -25,7 +25,7 @@ export const SimpleRainbow = () => {
       <Card shadow="sm" padding="md" radius="md" maw={'16rem'} withBorder>
         <Card.Section>
           <BackgroundImage
-            src={require('./cardImages/rainbow-fitbit.png')}
+            src={require('./images/rainbow-fitbit.png')}
             className={cx(classes.cardImage, classes.cardImageContain)}
             component={Flex}
             sx={{ backgroundColor: '#000' }}

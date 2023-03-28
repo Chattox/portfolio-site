@@ -24,7 +24,7 @@ export const Raddle = () => {
       <Card shadow="sm" padding="md" radius="md" maw={'16rem'} withBorder>
         <Card.Section>
           <BackgroundImage
-            src={require('./cardImages/raddle.png')}
+            src={require('./images/raddle.png')}
             className={cx(classes.cardImage, classes.cardImageContain)}
             component={Flex}
             sx={{ backgroundColor: '#FFF' }}

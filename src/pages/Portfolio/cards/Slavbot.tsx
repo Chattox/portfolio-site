@@ -24,7 +24,7 @@ export const Slavbot = () => {
       <Card shadow="sm" padding="md" radius="md" maw={'16rem'} withBorder>
         <Card.Section>
           <BackgroundImage
-            src={require('./cardImages/slavbot.jpg')}
+            src={require('./images/slavbot.jpg')}
             className={classes.cardImage}
             component={Flex}
           >

@@ -24,7 +24,7 @@ export const HelpingHand = () => {
       <Card shadow="sm" padding="md" radius="md" maw={'16rem'} withBorder>
         <Card.Section>
           <BackgroundImage
-            src={require('./cardImages/helpinghand-logo.png')}
+            src={require('./images/helpinghand-logo.png')}
             className={cx(classes.cardImage, classes.cardImageContain)}
             component={Flex}
             sx={{ backgroundColor: '#66BB6A' }}
