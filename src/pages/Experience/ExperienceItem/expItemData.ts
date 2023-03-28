@@ -1,4 +1,4 @@
-import { ExperienceItemProps } from './ExperienceItem';
+import { ExperienceItemProps } from '.';
 
 export const expItemData: Array<ExperienceItemProps> = [
   {

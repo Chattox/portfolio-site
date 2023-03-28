@@ -24,7 +24,7 @@ export const About = () => {
   return (
     <Group position="left" align="start" spacing="10%">
       <Image
-        src={require('../../images/rad-face.jpg')}
+        src={require('./images/rad-face.jpg')}
         withPlaceholder
         maw={240}
         radius={120}

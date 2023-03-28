@@ -10,13 +10,13 @@ import {
   Stack,
 } from '@mantine/core';
 import { motion } from 'framer-motion';
-import { IconBrandYoutube } from '@tabler/icons-react';
+import { IconBrandGithub } from '@tabler/icons-react';
 
-import { AnimatedButtonWrapper } from '../AnimatedButtonWrapper';
+import { AnimatedButtonWrapper } from '../../../components/AnimatedButtonWrapper';
 import { useStyles } from './cards.styles';
-import { getColor } from '../../utils/getColor';
+import { getColor } from '../../../utils/getColor';
 
-export const HelpingHand = () => {
+export const Raddle = () => {
   const { classes, cx } = useStyles();
 
   return (
@@ -24,28 +24,28 @@ export const HelpingHand = () => {
       <Card shadow="sm" padding="md" radius="md" maw={'16rem'} withBorder>
         <Card.Section>
           <BackgroundImage
-            src={require('./cardImages/helpinghand-logo.png')}
+            src={require('./cardImages/raddle.png')}
             className={cx(classes.cardImage, classes.cardImageContain)}
             component={Flex}
-            sx={{ backgroundColor: '#66BB6A' }}
+            sx={{ backgroundColor: '#FFF' }}
           >
             <Stack align="flex-end" justify="flex-end" spacing={3}>
-              <Badge>Mobile</Badge>
-              <Badge>Dart</Badge>
+              <Badge>Webapp</Badge>
+              <Badge>React</Badge>
               <Badge>JS</Badge>
-              <Badge>Full-stack</Badge>
+              <Badge>Front-end</Badge>
             </Stack>
           </BackgroundImage>
         </Card.Section>
-        <Title order={2}>HelpingHand</Title>
+        <Title order={2}>Raddle</Title>
         <Text size="sm" color="dimmed">
-          Cross-platform mobile app helping the elderly and vulnerable with their shopping
+          A Wordle clone built in React, because all the cool kids are doing it these days
         </Text>
         <Center>
           <AnimatedButtonWrapper>
-            <a href="https://www.youtube.com/watch?v=0aof27FyHCc" target="_blank" rel="noopener">
+            <a href="https://github.com/chattox/raddle" target="_blank" rel="noopener">
               <ActionIcon size="xl" variant="subtle" color={getColor()}>
-                <IconBrandYoutube size={48} />
+                <IconBrandGithub size={48} />
               </ActionIcon>
             </a>
           </AnimatedButtonWrapper>

@@ -1,8 +1,8 @@
 import { createStyles, Flex, useMantineColorScheme } from '@mantine/core';
 import { motion, useScroll, useSpring, useTransform } from 'framer-motion';
 import { IconMoonFilled, IconSunFilled } from '@tabler/icons-react';
-import { ExperienceItem } from '../../components/experience/ExperienceItem/ExperienceItem';
-import { expItemData } from '../../components/experience/ExperienceItem/expItemData';
+import { ExperienceItem } from './ExperienceItem';
+import { expItemData } from './ExperienceItem/expItemData';
 
 const useStyles = createStyles((theme) => ({
   background: {

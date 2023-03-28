@@ -10,13 +10,13 @@ import {
   Stack,
 } from '@mantine/core';
 import { motion } from 'framer-motion';
-import { IconBrandGithub } from '@tabler/icons-react';
+import { IconBrandYoutube } from '@tabler/icons-react';
 
-import { AnimatedButtonWrapper } from '../AnimatedButtonWrapper';
+import { AnimatedButtonWrapper } from '../../../components/AnimatedButtonWrapper';
 import { useStyles } from './cards.styles';
-import { getColor } from '../../utils/getColor';
+import { getColor } from '../../../utils/getColor';
 
-export const Raddle = () => {
+export const HelpingHand = () => {
   const { classes, cx } = useStyles();
 
   return (
@@ -24,28 +24,28 @@ export const Raddle = () => {
       <Card shadow="sm" padding="md" radius="md" maw={'16rem'} withBorder>
         <Card.Section>
           <BackgroundImage
-            src={require('./cardImages/raddle.png')}
+            src={require('./cardImages/helpinghand-logo.png')}
             className={cx(classes.cardImage, classes.cardImageContain)}
             component={Flex}
-            sx={{ backgroundColor: '#FFF' }}
+            sx={{ backgroundColor: '#66BB6A' }}
           >
             <Stack align="flex-end" justify="flex-end" spacing={3}>
-              <Badge>Webapp</Badge>
-              <Badge>React</Badge>
+              <Badge>Mobile</Badge>
+              <Badge>Dart</Badge>
               <Badge>JS</Badge>
-              <Badge>Front-end</Badge>
+              <Badge>Full-stack</Badge>
             </Stack>
           </BackgroundImage>
         </Card.Section>
-        <Title order={2}>Raddle</Title>
+        <Title order={2}>HelpingHand</Title>
         <Text size="sm" color="dimmed">
-          A Wordle clone built in React, because all the cool kids are doing it these days
+          Cross-platform mobile app helping the elderly and vulnerable with their shopping
         </Text>
         <Center>
           <AnimatedButtonWrapper>
-            <a href="https://github.com/chattox/raddle" target="_blank" rel="noopener">
+            <a href="https://www.youtube.com/watch?v=0aof27FyHCc" target="_blank" rel="noopener">
               <ActionIcon size="xl" variant="subtle" color={getColor()}>
-                <IconBrandGithub size={48} />
+                <IconBrandYoutube size={48} />
               </ActionIcon>
             </a>
           </AnimatedButtonWrapper>

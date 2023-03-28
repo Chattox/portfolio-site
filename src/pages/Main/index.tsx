@@ -1,10 +1,10 @@
 import { Container, Title, Tabs, createStyles, Group } from '@mantine/core';
 
-import { ThemeSwitcher } from '../components/ThemeSwitcher';
+import { ThemeSwitcher } from '../../components/ThemeSwitcher';
 
-import { About } from './content/About';
-import { Experience } from './content/Experience';
-import { Portfolio } from './content/Portfolio';
+import { About } from '../About';
+import { Experience } from '../Experience';
+import { Portfolio } from '../Portfolio';
 
 const useStyles = createStyles(() => ({
   mainContainer: {

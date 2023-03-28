@@ -5,52 +5,44 @@ import {
   Container,
   Text,
   Title,
-  BackgroundImage,
   Badge,
+  BackgroundImage,
   Flex,
   Stack,
 } from '@mantine/core';
 import { motion } from 'framer-motion';
 import { IconBrandGithub } from '@tabler/icons-react';
 
-import { AnimatedButtonWrapper } from '../AnimatedButtonWrapper';
+import { AnimatedButtonWrapper } from '../../../components/AnimatedButtonWrapper';
 import { useStyles } from './cards.styles';
+import { getColor } from '../../../utils/getColor';
 
-import { getColor } from '../../utils/getColor';
-
-export const SimpleRainbow = () => {
-  const { classes, cx } = useStyles();
-
+export const Slavbot = () => {
+  const { classes } = useStyles();
   return (
     <motion.div whileHover={{ y: -10 }}>
       <Card shadow="sm" padding="md" radius="md" maw={'16rem'} withBorder>
         <Card.Section>
           <BackgroundImage
-            src={require('./cardImages/rainbow-fitbit.png')}
-            className={cx(classes.cardImage, classes.cardImageContain)}
+            src={require('./cardImages/slavbot.jpg')}
+            className={classes.cardImage}
             component={Flex}
-            sx={{ backgroundColor: '#000' }}
           >
             <Stack align="flex-end" justify="flex-end" spacing={3}>
-              <Badge>Fitbit</Badge>
+              <Badge>Discord</Badge>
               <Badge>JS</Badge>
-              <Badge>Front-end</Badge>
+              <Badge>Back-end</Badge>
             </Stack>
           </BackgroundImage>
         </Card.Section>
         <Container sx={{ padding: 0 }}>
-          <Title order={2}>Simple Rainbow</Title>
+          <Title order={2}>Slavbot</Title>
           <Text size="sm" color="dimmed">
-            Clean, simple, custom Fitbit clockface with time, date, battery % and real time
-            heartrate display
+            A modular, lightweight Discord bot with an easily expandable command structure
           </Text>
           <Center>
             <AnimatedButtonWrapper>
-              <a
-                href="https://github.com/chattox/fitbit-custom-clock-faces/tree/main/simple-rainbow"
-                target="_blank"
-                rel="noopener"
-              >
+              <a href="https://github.com/chattox/slavbot_v3" target="_blank" rel="noopener">
                 <ActionIcon size="xl" variant="subtle" color={getColor()}>
                   <IconBrandGithub size={48} />
                 </ActionIcon>
