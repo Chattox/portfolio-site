@@ -83,7 +83,7 @@ export const About = () => {
           </AnimatedButtonWrapper>
           <AnimatedButtonWrapper>
             <a
-              href="mailto:conradlineker@gmail.com?subject=I love your portfolio!"
+              href="mailto:env.conrad@gmail.com?subject=I love your portfolio!"
               target="_blank"
               rel="noopener"
             >
