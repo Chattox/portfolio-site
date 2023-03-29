@@ -48,6 +48,10 @@ export const cardData: Array<PortfolioCardProps> = [
         url: 'https://github.com/chattox/raddle',
         icon: 'github',
       },
+      {
+        url: 'https://raddle.netlify.app',
+        icon: 'play',
+      },
     ],
     imageContain: true,
     bgColor: '#FFF',
@@ -83,6 +87,10 @@ export const cardData: Array<PortfolioCardProps> = [
         url: 'https://github.com/Chattox/MazeGen-FE',
         icon: 'github',
         tooltip: 'Front-end',
+      },
+      {
+        url: 'https://chattox-mazegen.netlify.app',
+        icon: 'play',
       },
     ],
     imageContain: true,

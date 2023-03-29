@@ -11,7 +11,7 @@ import {
   Tooltip,
 } from '@mantine/core';
 import { motion } from 'framer-motion';
-import { IconBrandGithub, IconBrandYoutube } from '@tabler/icons-react';
+import { IconBrandGithub, IconBrandYoutube, IconPlayerPlay } from '@tabler/icons-react';
 
 import { AnimatedButtonWrapper } from '../../../components/AnimatedButtonWrapper';
 import { useStyles } from './index.styles';
@@ -36,6 +36,7 @@ export interface PortfolioCardProps {
 const Icons: Record<string, JSX.Element> = {
   github: <IconBrandGithub size={48} />,
   youtube: <IconBrandYoutube size={48} />,
+  play: <IconPlayerPlay size={48} />,
 };
 
 export const PortfolioCard = ({
