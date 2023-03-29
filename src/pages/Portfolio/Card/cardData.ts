@@ -57,4 +57,23 @@ export const cardData: Array<PortfolioCardProps> = [
     imageContain: true,
     bgColor: '#000',
   },
+  {
+    cardImgSrc: require('./images/mazegen.png'),
+    tags: ['Webapp', 'Typescript', 'Python', 'Full-stack'],
+    title: 'MazeGen',
+    description:
+      'User configurable maze generator for all your dungeoning needs (dragons not included)',
+    links: [
+      {
+        url: 'https://github.com/Chattox/MazeGen',
+        icon: 'github',
+      },
+      {
+        url: 'https://github.com/Chattox/MazeGen-FE',
+        icon: 'github',
+      },
+    ],
+    imageContain: true,
+    bgColor: '#FFF',
+  },
 ];
