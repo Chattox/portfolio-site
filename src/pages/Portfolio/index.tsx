@@ -2,10 +2,8 @@ import { Container, Grid } from '@mantine/core';
 import { motion } from 'framer-motion';
 
 import { useStyles } from './index.styles';
-import { Slavbot } from './cards/Slavbot';
-import { HelpingHand } from './cards/HelpingHand';
-import { Raddle } from './cards/Raddle';
-import { SimpleRainbow } from './cards/SimpleRainbow';
+import { PortfolioCard, PortfolioCardProps } from './Card';
+import { cardData } from './Card/cardData';
 
 const cardAnim = {
   initial: {
@@ -25,26 +23,21 @@ export const Portfolio = () => {
     <Container className={classes.cardContainer} fluid>
       <motion.div initial="initial" animate="enterAnim" variants={cardAnim}>
         <Grid justify="space-evenly">
-          <Grid.Col span="content">
-            <motion.div variants={cardAnim}>
-              <Slavbot />
-            </motion.div>
-          </Grid.Col>
-          <Grid.Col span="content">
-            <motion.div variants={cardAnim}>
-              <HelpingHand />
-            </motion.div>
-          </Grid.Col>
-          <Grid.Col span="content">
-            <motion.div variants={cardAnim}>
-              <Raddle />
-            </motion.div>
-          </Grid.Col>
-          <Grid.Col span="content">
-            <motion.div variants={cardAnim}>
-              <SimpleRainbow />
-            </motion.div>
-          </Grid.Col>
+          {cardData.map((card: PortfolioCardProps) => (
+            <Grid.Col span="content">
+              <motion.div variants={cardAnim}>
+                <PortfolioCard
+                  cardImgSrc={card.cardImgSrc}
+                  tags={card.tags}
+                  title={card.title}
+                  description={card.description}
+                  links={card.links}
+                  imageContain={card.imageContain}
+                  bgColor={card.bgColor}
+                />
+              </motion.div>
+            </Grid.Col>
+          ))}
         </Grid>
       </motion.div>
     </Container>
