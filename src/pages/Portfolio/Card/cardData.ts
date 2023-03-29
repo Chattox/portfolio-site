@@ -24,6 +24,16 @@ export const cardData: Array<PortfolioCardProps> = [
         url: 'https://www.youtube.com/watch?v=0aof27FyHCc',
         icon: 'youtube',
       },
+      {
+        url: 'https://github.com/Chattox/helping-hand-backend',
+        icon: 'github',
+        tooltip: 'Back-end',
+      },
+      {
+        url: 'https://github.com/Chattox/helping-hand-frontend',
+        icon: 'github',
+        tooltip: 'Front-end',
+      },
     ],
     imageContain: true,
     bgColor: '#66BB6A',
