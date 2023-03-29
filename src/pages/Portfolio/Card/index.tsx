@@ -8,9 +8,10 @@ import {
   Stack,
   Text,
   Title,
+  Tooltip,
 } from '@mantine/core';
 import { motion } from 'framer-motion';
-import { IconBrandGithub } from '@tabler/icons-react';
+import { IconBrandGithub, IconBrandYoutube } from '@tabler/icons-react';
 
 import { AnimatedButtonWrapper } from '../../../components/AnimatedButtonWrapper';
 import { useStyles } from './index.styles';
@@ -19,6 +20,7 @@ import { getColor } from '../../../utils/getColor';
 export interface LinkProps {
   url: string;
   icon: string;
+  tooltip?: string;
 }
 
 export interface PortfolioCardProps {
@@ -33,6 +35,7 @@ export interface PortfolioCardProps {
 
 const Icons: Record<string, JSX.Element> = {
   github: <IconBrandGithub size={48} />,
+  youtube: <IconBrandYoutube size={48} />,
 };
 
 export const PortfolioCard = ({
@@ -72,11 +75,13 @@ export const PortfolioCard = ({
         <Center>
           {links?.map((link) => (
             <AnimatedButtonWrapper>
-              <a href={link.url} target="_blank" rel="noopener">
-                <ActionIcon size="xl" variant="subtle" color={getColor()}>
-                  {Icons[link.icon]}
-                </ActionIcon>
-              </a>
+              <Tooltip disabled={Boolean(!link.tooltip)} label={link.tooltip} withArrow>
+                <a href={link.url} target="_blank" rel="noopener">
+                  <ActionIcon size="xl" variant="subtle" color={getColor()}>
+                    {Icons[link.icon]}
+                  </ActionIcon>
+                </a>
+              </Tooltip>
             </AnimatedButtonWrapper>
           ))}
         </Center>

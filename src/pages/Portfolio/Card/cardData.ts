@@ -67,10 +67,12 @@ export const cardData: Array<PortfolioCardProps> = [
       {
         url: 'https://github.com/Chattox/MazeGen',
         icon: 'github',
+        tooltip: 'Back-end',
       },
       {
         url: 'https://github.com/Chattox/MazeGen-FE',
         icon: 'github',
+        tooltip: 'Front-end',
       },
     ],
     imageContain: true,
