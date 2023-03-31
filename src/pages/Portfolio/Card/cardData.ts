@@ -21,10 +21,6 @@ export const cardData: Array<PortfolioCardProps> = [
     description: 'Cross-platform mobile app helping the elderly and vulnerable with their shopping',
     links: [
       {
-        url: 'https://www.youtube.com/watch?v=0aof27FyHCc',
-        icon: 'youtube',
-      },
-      {
         url: 'https://github.com/Chattox/helping-hand-backend',
         icon: 'github',
         tooltip: 'Back-end',
@@ -33,6 +29,10 @@ export const cardData: Array<PortfolioCardProps> = [
         url: 'https://github.com/Chattox/helping-hand-frontend',
         icon: 'github',
         tooltip: 'Front-end',
+      },
+      {
+        url: 'https://www.youtube.com/watch?v=0aof27FyHCc',
+        icon: 'youtube',
       },
     ],
     imageContain: true,

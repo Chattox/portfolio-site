@@ -1,8 +1,9 @@
 import { ColorScheme, ColorSchemeProvider, MantineProvider } from '@mantine/core';
 import { useState } from 'react';
 
-import { lightTheme, darkTheme } from './themes';
+import { lightTheme, darkTheme } from './styles/themes';
 import { Main } from './pages/Main';
+import { PortfolioGlobalStyles } from './styles/PortfolioGlobalStyles';
 
 export default function App() {
   const [colorScheme, setColorScheme] = useState<ColorScheme>('light');
@@ -16,6 +17,7 @@ export default function App() {
         withGlobalStyles
         withNormalizeCSS
       >
+        <PortfolioGlobalStyles />
         <Main />
       </MantineProvider>
     </ColorSchemeProvider>

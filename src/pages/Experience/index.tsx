@@ -28,10 +28,14 @@ export const Experience = () => {
       {expItemData.map((item, i) => (
         <ExperienceItem
           side={i % 2 === 0 ? 'left' : 'right'}
+          firstOrLast={i === 0 ? 'first' : i === expItemData.length - 1 ? 'last' : undefined}
           imgSrc={item.imgSrc}
           title={item.title}
           content={item.content}
           dates={item.dates}
+          id={item.id}
+          prevId={i === 0 ? undefined : expItemData[i - 1].id}
+          nextId={i >= expItemData.length - 1 ? undefined : expItemData[i + 1].id}
         />
       ))}
     </Flex>
