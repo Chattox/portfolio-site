@@ -12,7 +12,7 @@ export const PortfolioGlobalStyles = () => {
         },
         '*::-webkit-scrollbar-thumb': {
           backgroundColor:
-            theme.colorScheme === 'light' ? theme.colors.gray[3] : theme.colors.gray[7],
+            theme.colorScheme === 'light' ? theme.colors.gray[4] : theme.colors.gray[7],
           borderRadius: '8px',
         },
       })}
