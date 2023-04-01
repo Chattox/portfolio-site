@@ -15,7 +15,7 @@ export const Main = () => {
         <Title order={1} size="60" inline={true} className={classes.title} data-testid="header">
           Conrad Lineker-Jones
         </Title>
-        <ThemeSwitcher />
+        <ThemeSwitcher size="xl" />
       </Group>
       <Tabs defaultValue="about" keepMounted={false}>
         <Tabs.List className={classes['tab-list']}>

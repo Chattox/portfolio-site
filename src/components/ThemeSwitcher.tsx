@@ -8,14 +8,18 @@ const useStyles = createStyles(() => ({
   },
 }));
 
-export const ThemeSwitcher = () => {
+interface ThemeSwitcherProps {
+  size: string;
+}
+
+export const ThemeSwitcher = ({ size }: ThemeSwitcherProps) => {
   const { colorScheme, toggleColorScheme } = useMantineColorScheme();
   const { classes } = useStyles();
 
   return (
     <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} className={classes.switcher}>
       <ActionIcon
-        size="xl"
+        size={size}
         variant="outline"
         onClick={() => toggleColorScheme()}
         color={colorScheme === 'dark' ? 'yellow.4' : 'blue.6'}

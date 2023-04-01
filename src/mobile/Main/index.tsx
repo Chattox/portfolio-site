@@ -1,21 +1,35 @@
-import { AppShell, Navbar, Header } from '@mantine/core';
+import { AppShell, Tabs, Drawer } from '@mantine/core';
+import { Header } from './Header';
+import { useDisclosure } from '@mantine/hooks';
 
 export const Main = () => {
+  const [opened, { open, close }] = useDisclosure(false);
+
   return (
-    <AppShell
-      padding="md"
-      navbar={
-        <Navbar width={{ base: 300 }} height={500} p="xs">
-          Navbar
-        </Navbar>
-      }
-      header={
-        <Header height={60} p="xs">
-          Header
-        </Header>
-      }
-    >
-      Main
-    </AppShell>
+    <Tabs defaultValue="about" orientation="vertical" keepMounted={false}>
+      <AppShell
+        padding="md"
+        navbar={
+          <Drawer opened={opened} onClose={close}>
+            <Tabs.List>
+              <Tabs.Tab value="about" onClick={close}>
+                About
+              </Tabs.Tab>
+              <Tabs.Tab value="experience" onClick={close}>
+                Experience
+              </Tabs.Tab>
+              <Tabs.Tab value="portfolio" onClick={close}>
+                Portfolio
+              </Tabs.Tab>
+            </Tabs.List>
+          </Drawer>
+        }
+        header={<Header open={open} isOpen={opened} />}
+      >
+        <Tabs.Panel value="about">About</Tabs.Panel>
+        <Tabs.Panel value="experience">Experience</Tabs.Panel>
+        <Tabs.Panel value="portfolio">Portfolio</Tabs.Panel>
+      </AppShell>
+    </Tabs>
   );
 };
