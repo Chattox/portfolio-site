@@ -6,7 +6,7 @@ export const Main = () => {
   const [opened, { open, close }] = useDisclosure(false);
 
   return (
-    <Tabs defaultValue="about" orientation="vertical" keepMounted={false}>
+    <Tabs defaultValue="about" orientation="vertical" variant="pills" keepMounted={false}>
       <AppShell
         padding="md"
         navbar={
