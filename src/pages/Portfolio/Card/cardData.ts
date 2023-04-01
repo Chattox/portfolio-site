@@ -67,6 +67,10 @@ export const cardData: Array<PortfolioCardProps> = [
         url: 'https://github.com/chattox/fitbit-custom-clock-faces/tree/main/simple-rainbow',
         icon: 'github',
       },
+      {
+        url: 'https://gallery.fitbit.com/details/becef6eb-7fd3-4adb-a46c-9ada0287cf67',
+        icon: 'fitbit',
+      },
     ],
     imageContain: true,
     bgColor: '#000',
