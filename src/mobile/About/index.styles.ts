@@ -2,7 +2,7 @@ import { createStyles } from '@mantine/core';
 
 export const useStyles = createStyles(() => ({
   contentContainer: {
-    padding: '16px',
+    margin: 0,
     width: '100%',
   },
   text: {
