@@ -1,12 +1,13 @@
 import { createStyles } from '@mantine/core';
 
 export const useStyles = createStyles(() => ({
-  contentContainer: {
-    padding: '16px',
-    width: '100%',
+  header: {
+    width: '100vw',
   },
-  text: {
-    textAlign: 'left',
-    padding: '8px',
+  mainContainer: {
+    width: '100vw',
+  },
+  contentContainer: {
+    padding: 0,
   },
 }));
