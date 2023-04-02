@@ -1,5 +1,6 @@
 import { Burger, Group, Header as MantineHeader, Title } from '@mantine/core';
 
+import { useStyles } from './index.styles';
 import { ThemeSwitcher } from '../../components/ThemeSwitcher';
 
 interface HeaderProps {
@@ -8,11 +9,12 @@ interface HeaderProps {
 }
 
 export const Header = ({ open, isOpen }: HeaderProps) => {
+  const { classes } = useStyles();
   return (
     <MantineHeader height={'4rem'}>
-      <Group sx={{ height: '100%', paddingLeft: '1rem' }} align="center" position="apart">
+      <Group align="center" position="apart">
         <Group>
-          <Burger opened={isOpen} onClick={open} />
+          <Burger opened={isOpen} onClick={open} className={classes.navbarToggle} />
           <Title order={4} inline>
             Conrad Lineker-Jones
           </Title>
