@@ -1,4 +1,5 @@
 import { Burger, Group, Header as MantineHeader, Title } from '@mantine/core';
+
 import { ThemeSwitcher } from '../../components/ThemeSwitcher';
 
 interface HeaderProps {

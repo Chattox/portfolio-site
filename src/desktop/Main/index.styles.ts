@@ -7,10 +7,7 @@ export const useStyles = createStyles(() => ({
   title: {
     padding: '16px',
   },
-  'tab-container': {
-    width: '100vw',
-  },
-  'tab-list': {
+  tabList: {
     // fix for tab bottom borders not transitioning properly for some reason
     transition: 'border-bottom-color 0.3s',
   },

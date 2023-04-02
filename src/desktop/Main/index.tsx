@@ -18,7 +18,7 @@ export const Main = () => {
         <ThemeSwitcher size="xl" />
       </Group>
       <Tabs defaultValue="about" keepMounted={false}>
-        <Tabs.List className={classes['tab-list']}>
+        <Tabs.List className={classes.tabList}>
           <Tabs.Tab value="about">About</Tabs.Tab>
           <Tabs.Tab value="experience">Experience</Tabs.Tab>
           <Tabs.Tab value="portfolio">Portfolio</Tabs.Tab>
