@@ -1,6 +1,8 @@
 import { AppShell, Tabs, Drawer } from '@mantine/core';
-import { Header } from './Header';
 import { useDisclosure } from '@mantine/hooks';
+
+import { Header } from './Header';
+import { About } from '../About';
 
 export const Main = () => {
   const [opened, { open, close }] = useDisclosure(false);
@@ -26,7 +28,9 @@ export const Main = () => {
         }
         header={<Header open={open} isOpen={opened} />}
       >
-        <Tabs.Panel value="about">About</Tabs.Panel>
+        <Tabs.Panel value="about">
+          <About />
+        </Tabs.Panel>
         <Tabs.Panel value="experience">Experience</Tabs.Panel>
         <Tabs.Panel value="portfolio">Portfolio</Tabs.Panel>
       </AppShell>
