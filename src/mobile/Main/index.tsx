@@ -14,7 +14,7 @@ export const Main = () => {
       <AppShell
         padding="md"
         navbar={
-          <Drawer opened={opened} onClose={close}>
+          <Drawer opened={opened} onClose={close} className={classes.navbarDrawer}>
             <Tabs.List>
               <Tabs.Tab value="about" onClick={close}>
                 About
