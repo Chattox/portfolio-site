@@ -4,6 +4,7 @@ import { useDisclosure } from '@mantine/hooks';
 import { Header } from './Header';
 import { About } from '../About';
 import { useStyles } from './index.styles';
+import { Experience } from '../Experience';
 
 export const Main = () => {
   const [opened, { open, close }] = useDisclosure(false);
@@ -34,7 +35,9 @@ export const Main = () => {
           <Tabs.Panel value="about">
             <About />
           </Tabs.Panel>
-          <Tabs.Panel value="experience">Experience</Tabs.Panel>
+          <Tabs.Panel value="experience">
+            <Experience />
+          </Tabs.Panel>
           <Tabs.Panel value="portfolio">Portfolio</Tabs.Panel>
         </Container>
       </AppShell>
