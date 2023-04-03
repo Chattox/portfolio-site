@@ -21,5 +21,8 @@ export const useStyles = createStyles((theme) => {
     expItem: {
       y: -20,
     },
+    backgroundIcon: {
+      color: theme.colorScheme === 'light' ? theme.colors.yellow[5] : theme.colors.yellow[0],
+    },
   };
 });
