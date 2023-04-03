@@ -4,7 +4,7 @@ import { IconMoonFilled, IconSunFilled } from '@tabler/icons-react';
 
 import { useStyles } from './index.styles';
 import { ExperienceItem } from './ExperienceItem';
-import { expItemData } from './ExperienceItem/expItemData';
+import { expItemData } from '../../content/experience/expItemData';
 
 export const Experience = () => {
   const { classes } = useStyles();
