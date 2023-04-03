@@ -1,10 +1,25 @@
 import { createStyles } from '@mantine/core';
 
-export const useStyles = createStyles(() => ({
-  expContainer: {
-    padding: '1rem',
-  },
-  expItem: {
-    y: -20,
-  },
-}));
+export const useStyles = createStyles((theme) => {
+  const lightGradient = () => {
+    return theme.fn.gradient({ from: theme.colors.blue[3], to: theme.colors.blue[2], deg: 180 });
+  };
+  const darkGradient = () => {
+    return theme.fn.gradient({
+      from: theme.colors.indigo[9],
+      to: theme.colors.indigo[6],
+      deg: 180,
+    });
+  };
+  return {
+    expContainer: {
+      padding: '1rem',
+      backgroundColor:
+        theme.colorScheme === 'light' ? theme.colors.blue[3] : theme.colors.indigo[9],
+      backgroundImage: theme.colorScheme === 'light' ? lightGradient() : darkGradient(),
+    },
+    expItem: {
+      y: -20,
+    },
+  };
+});

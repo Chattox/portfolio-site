@@ -13,7 +13,7 @@ export const Main = () => {
   return (
     <Tabs defaultValue="about" orientation="vertical" variant="pills" keepMounted={false}>
       <AppShell
-        padding="md"
+        padding={0}
         navbar={
           <Drawer opened={opened} onClose={close} className={classes.navbarDrawer}>
             <Tabs.List>
