@@ -14,29 +14,14 @@ import { motion } from 'framer-motion';
 import {
   IconBrandGithub,
   IconBrandYoutube,
-  IconDeviceWatch,
   IconPlayerPlay,
+  IconDeviceWatch,
 } from '@tabler/icons-react';
 
 import { AnimatedButtonWrapper } from '../../../components/AnimatedButtonWrapper';
 import { useStyles } from './index.styles';
 import { getColor } from '../../../utils/getColor';
-
-export interface LinkProps {
-  url: string;
-  icon: string;
-  tooltip?: string;
-}
-
-export interface PortfolioCardProps {
-  cardImgSrc: string;
-  tags?: Array<string>;
-  title: string;
-  description: string;
-  links?: Array<LinkProps>;
-  imageContain?: boolean;
-  bgColor?: string;
-}
+import { PortfolioProps } from '../../../content/portfolio/portfolioData';
 
 const Icons: Record<string, JSX.Element> = {
   github: <IconBrandGithub size={48} />,
@@ -46,14 +31,14 @@ const Icons: Record<string, JSX.Element> = {
 };
 
 export const PortfolioCard = ({
-  cardImgSrc,
+  imgSrc,
   tags,
   title,
   description,
   links,
   imageContain,
   bgColor,
-}: PortfolioCardProps) => {
+}: PortfolioProps) => {
   const { classes, cx } = useStyles();
 
   return (
@@ -61,7 +46,7 @@ export const PortfolioCard = ({
       <Card shadow="sm" padding="md" radius="md" maw={'16rem'} withBorder>
         <Card.Section>
           <BackgroundImage
-            src={cardImgSrc}
+            src={imgSrc}
             className={
               imageContain ? cx(classes.cardImage, classes.cardImageContain) : classes.cardImage
             }

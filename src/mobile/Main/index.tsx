@@ -5,6 +5,7 @@ import { Header } from './Header';
 import { About } from '../About';
 import { useStyles } from './index.styles';
 import { Experience } from '../Experience';
+import { Portfolio } from '../Portfolio';
 
 export const Main = () => {
   const [opened, { toggle }] = useDisclosure(false);
@@ -38,7 +39,9 @@ export const Main = () => {
           <Tabs.Panel value="experience">
             <Experience />
           </Tabs.Panel>
-          <Tabs.Panel value="portfolio">Portfolio</Tabs.Panel>
+          <Tabs.Panel value="portfolio">
+            <Portfolio />
+          </Tabs.Panel>
         </Container>
       </AppShell>
     </Tabs>

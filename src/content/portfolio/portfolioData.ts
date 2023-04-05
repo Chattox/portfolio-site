@@ -1,10 +1,26 @@
-import { PortfolioCardProps } from '.';
+export interface LinkProps {
+  url: string;
+  icon: string;
+  tooltip?: string;
+}
 
-export const cardData: Array<PortfolioCardProps> = [
+export interface PortfolioProps {
+  imgSrc: string;
+  tags?: Array<string>;
+  title: string;
+  tagline?: string;
+  description: string;
+  links?: Array<LinkProps>;
+  imageContain?: boolean;
+  bgColor?: string;
+}
+
+export const portfolioData: Array<PortfolioProps> = [
   {
-    cardImgSrc: require('./images/slavbot.jpg'),
+    imgSrc: require('./images/slavbot.jpg'),
     tags: ['Discord', 'JS', 'Back-end'],
     title: 'Slavbot',
+    tagline: 'Modular Discord bot',
     description: 'A modular, lightweight Discord bot with an easily expandable command structure',
     links: [
       {
@@ -15,9 +31,10 @@ export const cardData: Array<PortfolioCardProps> = [
     imageContain: false,
   },
   {
-    cardImgSrc: require('./images/helpinghand-logo.png'),
+    imgSrc: require('./images/helpinghand-logo.png'),
     tags: ['Mobile', 'Dart', 'JS', 'Full-stack'],
     title: 'HelpingHand',
+    tagline: 'Mobile app helping the vulnerable with their shopping',
     description: 'Cross-platform mobile app helping the elderly and vulnerable with their shopping',
     links: [
       {
@@ -39,10 +56,11 @@ export const cardData: Array<PortfolioCardProps> = [
     bgColor: '#66BB6A',
   },
   {
-    cardImgSrc: require('./images/raddle.png'),
+    imgSrc: require('./images/raddle.png'),
     tags: ['Webapp', 'React', 'JS', 'Front-end'],
     title: 'Raddle',
-    description: 'A World clone built in React, because all the cool kids are doing it these days',
+    tagline: 'React-based Wordle clone',
+    description: 'A Wordle clone built in React, because all the cool kids are doing it these days',
     links: [
       {
         url: 'https://github.com/chattox/raddle',
@@ -57,9 +75,10 @@ export const cardData: Array<PortfolioCardProps> = [
     bgColor: '#FFF',
   },
   {
-    cardImgSrc: require('./images/rainbow-fitbit.png'),
+    imgSrc: require('./images/rainbow-fitbit.png'),
     tags: ['Fitbit', 'JS', 'Front-end'],
     title: 'Simple Rainbow',
+    tagline: 'Custom Fitbit clockface',
     description:
       'Clean, simple, custom Fitbit clockface with time, date, battery % and real time heart rate display',
     links: [
@@ -76,9 +95,10 @@ export const cardData: Array<PortfolioCardProps> = [
     bgColor: '#000',
   },
   {
-    cardImgSrc: require('./images/mazegen.png'),
+    imgSrc: require('./images/mazegen.png'),
     tags: ['Webapp', 'Typescript', 'Python', 'Full-stack'],
     title: 'MazeGen',
+    tagline: 'Configurable maze generator',
     description:
       'User configurable maze generator for all your dungeoning needs (dragons not included)',
     links: [
