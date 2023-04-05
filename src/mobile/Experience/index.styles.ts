@@ -21,8 +21,14 @@ export const useStyles = createStyles((theme) => {
     expItem: {
       y: -20,
     },
-    backgroundIcon: {
+    backgroundSunMoon: {
       color: theme.colorScheme === 'light' ? theme.colors.yellow[5] : theme.colors.yellow[0],
+    },
+    backgroundCloudBack: {
+      color: theme.colors.gray[3],
+    },
+    backgroundCloudFront: {
+      color: theme.colors.gray[4],
     },
   };
 });
