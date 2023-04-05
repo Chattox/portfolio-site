@@ -2,8 +2,8 @@ import { Container, Grid } from '@mantine/core';
 import { motion } from 'framer-motion';
 
 import { useStyles } from './index.styles';
-import { PortfolioCard, PortfolioCardProps } from './Card';
-import { cardData } from './Card/cardData';
+import { PortfolioCard } from './Card';
+import { portfolioData, PortfolioProps } from '../../content/portfolio/portfolioData';
 
 const cardAnim = {
   initial: {
@@ -23,11 +23,11 @@ export const Portfolio = () => {
     <Container className={classes.cardContainer} fluid>
       <motion.div initial="initial" animate="enterAnim" variants={cardAnim}>
         <Grid justify="space-evenly">
-          {cardData.map((card: PortfolioCardProps) => (
+          {portfolioData.map((card: PortfolioProps) => (
             <Grid.Col span="content">
               <motion.div variants={cardAnim}>
                 <PortfolioCard
-                  cardImgSrc={card.cardImgSrc}
+                  imgSrc={card.imgSrc}
                   tags={card.tags}
                   title={card.title}
                   description={card.description}

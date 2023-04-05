@@ -15,10 +15,10 @@ export const Main = () => {
         <Title order={1} size="60" inline={true} className={classes.title} data-testid="header">
           Conrad Lineker-Jones
         </Title>
-        <ThemeSwitcher />
+        <ThemeSwitcher size="xl" />
       </Group>
       <Tabs defaultValue="about" keepMounted={false}>
-        <Tabs.List className={classes['tab-list']}>
+        <Tabs.List className={classes.tabList}>
           <Tabs.Tab value="about">About</Tabs.Tab>
           <Tabs.Tab value="experience">Experience</Tabs.Tab>
           <Tabs.Tab value="portfolio">Portfolio</Tabs.Tab>
