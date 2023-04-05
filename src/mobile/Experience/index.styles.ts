@@ -25,10 +25,10 @@ export const useStyles = createStyles((theme) => {
       color: theme.colorScheme === 'light' ? theme.colors.yellow[5] : theme.colors.yellow[0],
     },
     backgroundCloudBack: {
-      color: theme.colors.gray[3],
+      color: theme.colorScheme === 'light' ? theme.colors.gray[3] : theme.colors.gray[5],
     },
     backgroundCloudFront: {
-      color: theme.colors.gray[4],
+      color: theme.colorScheme === 'light' ? theme.colors.gray[4] : theme.colors.gray[6],
     },
   };
 });
