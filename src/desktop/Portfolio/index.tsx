@@ -27,7 +27,7 @@ export const Portfolio = () => {
             <Grid.Col span="content">
               <motion.div variants={cardAnim}>
                 <PortfolioCard
-                  cardImgSrc={card.cardImgSrc}
+                  imgSrc={card.imgSrc}
                   tags={card.tags}
                   title={card.title}
                   description={card.description}

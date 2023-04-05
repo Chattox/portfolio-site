@@ -14,8 +14,8 @@ import { motion } from 'framer-motion';
 import {
   IconBrandGithub,
   IconBrandYoutube,
-  IconDeviceWatch,
   IconPlayerPlay,
+  IconDeviceWatch,
 } from '@tabler/icons-react';
 
 import { AnimatedButtonWrapper } from '../../../components/AnimatedButtonWrapper';
@@ -31,7 +31,7 @@ const Icons: Record<string, JSX.Element> = {
 };
 
 export const PortfolioCard = ({
-  cardImgSrc,
+  imgSrc,
   tags,
   title,
   description,
@@ -46,7 +46,7 @@ export const PortfolioCard = ({
       <Card shadow="sm" padding="md" radius="md" maw={'16rem'} withBorder>
         <Card.Section>
           <BackgroundImage
-            src={cardImgSrc}
+            src={imgSrc}
             className={
               imageContain ? cx(classes.cardImage, classes.cardImageContain) : classes.cardImage
             }
