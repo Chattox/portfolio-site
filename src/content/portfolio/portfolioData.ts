@@ -1,6 +1,20 @@
-import { PortfolioCardProps } from '../../desktop/Portfolio/Card';
+export interface LinkProps {
+  url: string;
+  icon: string;
+  tooltip?: string;
+}
 
-export const cardData: Array<PortfolioCardProps> = [
+export interface PortfolioProps {
+  cardImgSrc: string;
+  tags?: Array<string>;
+  title: string;
+  description: string;
+  links?: Array<LinkProps>;
+  imageContain?: boolean;
+  bgColor?: string;
+}
+
+export const portfolioData: Array<PortfolioProps> = [
   {
     cardImgSrc: require('./images/slavbot.jpg'),
     tags: ['Discord', 'JS', 'Back-end'],

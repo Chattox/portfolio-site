@@ -21,22 +21,7 @@ import {
 import { AnimatedButtonWrapper } from '../../../components/AnimatedButtonWrapper';
 import { useStyles } from './index.styles';
 import { getColor } from '../../../utils/getColor';
-
-export interface LinkProps {
-  url: string;
-  icon: string;
-  tooltip?: string;
-}
-
-export interface PortfolioCardProps {
-  cardImgSrc: string;
-  tags?: Array<string>;
-  title: string;
-  description: string;
-  links?: Array<LinkProps>;
-  imageContain?: boolean;
-  bgColor?: string;
-}
+import { PortfolioProps } from '../../../content/portfolio/portfolioData';
 
 const Icons: Record<string, JSX.Element> = {
   github: <IconBrandGithub size={48} />,
@@ -53,7 +38,7 @@ export const PortfolioCard = ({
   links,
   imageContain,
   bgColor,
-}: PortfolioCardProps) => {
+}: PortfolioProps) => {
   const { classes, cx } = useStyles();
 
   return (
