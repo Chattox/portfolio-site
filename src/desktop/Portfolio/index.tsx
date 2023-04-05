@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 import { useStyles } from './index.styles';
 import { PortfolioCard, PortfolioCardProps } from './Card';
-import { cardData } from './Card/cardData';
+import { cardData } from '../../content/portfolio/cardData';
 
 const cardAnim = {
   initial: {

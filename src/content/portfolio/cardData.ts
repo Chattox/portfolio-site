@@ -1,4 +1,4 @@
-import { PortfolioCardProps } from '.';
+import { PortfolioCardProps } from '../../desktop/Portfolio/Card';
 
 export const cardData: Array<PortfolioCardProps> = [
   {
