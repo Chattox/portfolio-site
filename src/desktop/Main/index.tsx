@@ -1,4 +1,4 @@
-import { Container, Title, Tabs, Group, useMantineTheme } from '@mantine/core';
+import { Container, Title, Tabs, Group } from '@mantine/core';
 
 import { useStyles } from './index.styles';
 import { Bindrune } from '../../content/main/images/bindrune';
@@ -9,7 +9,6 @@ import { Portfolio } from '../Portfolio';
 
 export const Main = () => {
   const { classes } = useStyles();
-  const theme = useMantineTheme();
 
   return (
     <Container sx={{ height: '100%' }} fluid={true} className={classes.mainContainer}>
@@ -19,7 +18,6 @@ export const Main = () => {
             height="6rem"
             width="6rem"
             strokeWidth="4rem"
-            color={theme.fn.primaryColor()}
             linecap="round"
             corners="round"
             className={classes.logo}

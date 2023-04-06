@@ -1,8 +1,9 @@
+import { useMantineTheme } from '@mantine/core';
+
 interface BindruneProps {
   height: string;
   width: string;
   strokeWidth: string;
-  color?: string;
   linecap?: 'butt' | 'round' | 'square' | undefined;
   corners?: 'round' | 'miter' | 'bevel' | undefined;
   className?: string;
@@ -12,11 +13,12 @@ export const Bindrune = ({
   height,
   width,
   strokeWidth,
-  color,
   linecap,
   corners,
   className,
 }: BindruneProps) => {
+  const theme = useMantineTheme();
+
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -28,7 +30,7 @@ export const Bindrune = ({
       <path
         id="Bindrune Logo"
         fill="none"
-        stroke={color}
+        stroke={theme.fn.primaryColor()}
         stroke-width={strokeWidth}
         strokeLinecap={linecap}
         strokeLinejoin={corners}
