@@ -5,7 +5,11 @@ export const useStyles = createStyles(() => ({
     padding: '0',
   },
   title: {
-    padding: '16px',
+    padding: '0.5rem',
+  },
+  logo: {
+    marginTop: '0.5rem',
+    marginLeft: '0.5rem',
   },
   tabList: {
     // fix for tab bottom borders not transitioning properly for some reason
