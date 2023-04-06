@@ -14,14 +14,7 @@ export const Main = () => {
     <Container sx={{ height: '100%' }} fluid={true} className={classes.mainContainer}>
       <Group position="apart">
         <Group>
-          <Bindrune
-            height="6rem"
-            width="6rem"
-            strokeWidth="4rem"
-            linecap="round"
-            corners="round"
-            className={classes.logo}
-          />
+          <Bindrune height="6rem" width="6rem" strokeWidth="4rem" className={classes.logo} />
           <Title order={1} size="60" inline={true} className={classes.title} data-testid="header">
             Conrad Lineker-Jones
           </Title>

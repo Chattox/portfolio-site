@@ -4,19 +4,10 @@ interface BindruneProps {
   height: string;
   width: string;
   strokeWidth: string;
-  linecap?: 'butt' | 'round' | 'square' | undefined;
-  corners?: 'round' | 'miter' | 'bevel' | undefined;
   className?: string;
 }
 
-export const Bindrune = ({
-  height,
-  width,
-  strokeWidth,
-  linecap,
-  corners,
-  className,
-}: BindruneProps) => {
+export const Bindrune = ({ height, width, strokeWidth, className }: BindruneProps) => {
   const theme = useMantineTheme();
 
   return (
@@ -32,8 +23,8 @@ export const Bindrune = ({
         fill="none"
         stroke={theme.fn.primaryColor()}
         stroke-width={strokeWidth}
-        strokeLinecap={linecap}
-        strokeLinejoin={corners}
+        strokeLinecap="round"
+        strokeLinejoin="round"
         d="M 512.00,960.00
            C 512.00,960.00 288.00,736.00 288.00,736.00
              288.00,736.00 512.00,512.00 512.00,512.00
