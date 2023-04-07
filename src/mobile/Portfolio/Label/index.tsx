@@ -1,15 +1,20 @@
-import { Avatar, Group, Stack, Text } from '@mantine/core';
+import { Avatar, Group, Stack, Text, useMantineTheme } from '@mantine/core';
 
 interface LabelProps {
-  imgSrc: string;
+  imgSrc: Record<string, string>;
   title: string;
   tagline?: string;
 }
 
 export const Label = ({ imgSrc, title, tagline }: LabelProps) => {
+  const theme = useMantineTheme();
   return (
     <Group noWrap>
-      <Avatar src={imgSrc} radius="xl" size="lg" />
+      <Avatar
+        src={theme.colorScheme === 'light' ? imgSrc.light : imgSrc.dark}
+        radius="xl"
+        size="lg"
+      />
       <Stack>
         <Text>{title}</Text>
         <Text size="sm" color="dimmed" weight={400}>

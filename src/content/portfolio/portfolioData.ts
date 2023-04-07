@@ -5,7 +5,7 @@ export interface LinkProps {
 }
 
 export interface PortfolioProps {
-  imgSrc: string;
+  imgSrc: Record<string, string>;
   tags?: Array<string>;
   title: string;
   tagline?: string;
@@ -17,7 +17,7 @@ export interface PortfolioProps {
 
 export const portfolioData: Array<PortfolioProps> = [
   {
-    imgSrc: require('./images/slavbot.jpg'),
+    imgSrc: { light: require('./images/slavbot.jpg'), dark: require('./images/slavbot.jpg') },
     tags: ['Discord', 'JS', 'Back-end'],
     title: 'Slavbot',
     tagline: 'Modular Discord bot',
@@ -31,7 +31,10 @@ export const portfolioData: Array<PortfolioProps> = [
     imageContain: false,
   },
   {
-    imgSrc: require('./images/helpinghand-logo.png'),
+    imgSrc: {
+      light: require('./images/helpinghand-logo.png'),
+      dark: require('./images/helpinghand-logo.png'),
+    },
     tags: ['Mobile', 'Dart', 'JS', 'Full-stack'],
     title: 'HelpingHand',
     tagline: 'Mobile app helping the vulnerable with their shopping',
@@ -56,7 +59,7 @@ export const portfolioData: Array<PortfolioProps> = [
     bgColor: '#66BB6A',
   },
   {
-    imgSrc: require('./images/raddle.png'),
+    imgSrc: { light: require('./images/raddle.png'), dark: require('./images/raddle.png') },
     tags: ['Webapp', 'React', 'JS', 'Front-end'],
     title: 'Raddle',
     tagline: 'React-based Wordle clone',
@@ -75,7 +78,10 @@ export const portfolioData: Array<PortfolioProps> = [
     bgColor: '#FFF',
   },
   {
-    imgSrc: require('./images/rainbow-fitbit.png'),
+    imgSrc: {
+      light: require('./images/rainbow-fitbit.png'),
+      dark: require('./images/rainbow-fitbit.png'),
+    },
     tags: ['Fitbit', 'JS', 'Front-end'],
     title: 'Simple Rainbow',
     tagline: 'Custom Fitbit clockface',
@@ -95,7 +101,7 @@ export const portfolioData: Array<PortfolioProps> = [
     bgColor: '#000',
   },
   {
-    imgSrc: require('./images/mazegen.png'),
+    imgSrc: { light: require('./images/mazegen.png'), dark: require('./images/mazegen.png') },
     tags: ['Webapp', 'Typescript', 'Python', 'Full-stack'],
     title: 'MazeGen',
     tagline: 'Configurable maze generator',
@@ -119,5 +125,22 @@ export const portfolioData: Array<PortfolioProps> = [
     ],
     imageContain: true,
     bgColor: '#FFF',
+  },
+  {
+    imgSrc: {
+      light: require('./images/portfolio-light.png'),
+      dark: require('./images/portfolio-dark.png'),
+    },
+    tags: ['React', 'Typescript', 'Front-end'],
+    title: 'Portfolio',
+    tagline: "What you're looking at right now!",
+    description: "You're already looking at it, but you can check out the code too",
+    links: [
+      {
+        url: 'https://github.com/Chattox/Chattox.github.io',
+        icon: 'github',
+      },
+    ],
+    imageContain: true,
   },
 ];
