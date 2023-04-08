@@ -5,6 +5,7 @@ import { IconMoonFilled, IconSunFilled } from '@tabler/icons-react';
 import { useStyles } from './index.styles';
 import { ExperienceItem } from './ExperienceItem';
 import { expItemData } from '../../content/experience/expItemData';
+import { ScrollToTop } from '../../components/ScrollToTop';
 
 export const Experience = () => {
   const { classes } = useStyles();
@@ -25,6 +26,7 @@ export const Experience = () => {
           <IconMoonFilled className={classes.backgroundIcon} size={150} />
         )}
       </motion.div>
+      <ScrollToTop />
       {expItemData.map((item, i) => (
         <ExperienceItem
           side={i % 2 === 0 ? 'left' : 'right'}
