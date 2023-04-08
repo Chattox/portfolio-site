@@ -9,6 +9,7 @@ import {
   Text,
   Title,
   Tooltip,
+  useMantineTheme,
 } from '@mantine/core';
 import { motion } from 'framer-motion';
 import {
@@ -40,13 +41,14 @@ export const PortfolioCard = ({
   bgColor,
 }: PortfolioProps) => {
   const { classes, cx } = useStyles();
+  const theme = useMantineTheme();
 
   return (
     <motion.div whileHover={{ y: -10 }}>
       <Card shadow="sm" padding="md" radius="md" maw={'16rem'} withBorder>
         <Card.Section>
           <BackgroundImage
-            src={imgSrc}
+            src={theme.colorScheme === 'light' ? imgSrc.light : imgSrc.dark}
             className={
               imageContain ? cx(classes.cardImage, classes.cardImageContain) : classes.cardImage
             }
@@ -61,7 +63,7 @@ export const PortfolioCard = ({
           </BackgroundImage>
         </Card.Section>
         <Title order={2}>{title}</Title>
-        <Text size="sm" color="dimmed">
+        <Text size="sm" color="dimmed" sx={{ height: '4rem' }}>
           {description}
         </Text>
         <Center>
