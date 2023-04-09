@@ -5,6 +5,7 @@ import { IconMoonFilled, IconSunFilled } from '@tabler/icons-react';
 import { useStyles } from './index.styles';
 import { ExperienceItem } from './ExperienceItem';
 import { expItemData } from '../../content/experience/expItemData';
+import { ScrollToTop } from '../../components/ScrollToTop';
 
 export const Experience = () => {
   const { classes } = useStyles();
@@ -38,6 +39,7 @@ export const Experience = () => {
           nextId={i >= expItemData.length - 1 ? undefined : expItemData[i + 1].id}
         />
       ))}
+      <ScrollToTop triggerPoint={750} bottom="2rem" left="2rem" />
     </Flex>
   );
 };

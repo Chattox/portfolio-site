@@ -18,9 +18,6 @@ export const useStyles = createStyles((theme) => {
         theme.colorScheme === 'light' ? theme.colors.blue[3] : theme.colors.indigo[9],
       backgroundImage: theme.colorScheme === 'light' ? lightGradient() : darkGradient(),
     },
-    expItem: {
-      y: -20,
-    },
     backgroundSunMoon: {
       color: theme.colorScheme === 'light' ? theme.colors.yellow[5] : theme.colors.yellow[0],
     },

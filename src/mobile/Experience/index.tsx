@@ -5,6 +5,7 @@ import { expItemData } from '../../content/experience/expItemData';
 import { ExperienceItem } from './ExperienceItem';
 import { useStyles } from './index.styles';
 import { IconCloudFilled, IconMoonFilled, IconSunFilled } from '@tabler/icons-react';
+import { ScrollToTop } from '../../components/ScrollToTop';
 
 export const Experience = () => {
   const { classes } = useStyles();
@@ -53,6 +54,7 @@ export const Experience = () => {
           content={item.content}
         />
       ))}
+      <ScrollToTop triggerPoint={300} bottom="2rem" right="2rem" />
     </Flex>
   );
 };
