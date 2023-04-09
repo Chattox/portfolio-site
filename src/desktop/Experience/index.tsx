@@ -26,7 +26,6 @@ export const Experience = () => {
           <IconMoonFilled className={classes.backgroundIcon} size={150} />
         )}
       </motion.div>
-      <ScrollToTop triggerPoint={750} bottom="2rem" right="2rem" />
       {expItemData.map((item, i) => (
         <ExperienceItem
           side={i % 2 === 0 ? 'left' : 'right'}
@@ -40,6 +39,7 @@ export const Experience = () => {
           nextId={i >= expItemData.length - 1 ? undefined : expItemData[i + 1].id}
         />
       ))}
+      <ScrollToTop triggerPoint={750} bottom="2rem" left="2rem" />
     </Flex>
   );
 };
