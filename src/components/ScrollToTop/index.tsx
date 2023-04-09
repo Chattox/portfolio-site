@@ -4,12 +4,18 @@ import { IconArrowBigUpLinesFilled } from '@tabler/icons-react';
 import { AnimatedButtonWrapper } from '../AnimatedButtonWrapper';
 import { useStyles } from './index.styles';
 
-export const ScrollToTop = () => {
+interface ScrollToTopProps {
+  triggerPoint: number;
+  bottom: string | number;
+  right: string | number;
+}
+
+export const ScrollToTop = ({ triggerPoint, bottom, right }: ScrollToTopProps) => {
   const [scroll, scrollTo] = useWindowScroll();
   const { classes } = useStyles();
   return (
-    <Affix position={{ bottom: '2rem', right: '50%' }}>
-      <Transition transition="slide-up" mounted={scroll.y > 750}>
+    <Affix position={{ bottom: bottom, right: right }}>
+      <Transition transition="slide-up" mounted={scroll.y > triggerPoint}>
         {(transitionStyles) => (
           <Container style={transitionStyles} onClick={() => scrollTo({ y: 0 })}>
             <AnimatedButtonWrapper>

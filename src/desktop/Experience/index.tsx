@@ -26,7 +26,7 @@ export const Experience = () => {
           <IconMoonFilled className={classes.backgroundIcon} size={150} />
         )}
       </motion.div>
-      <ScrollToTop />
+      <ScrollToTop triggerPoint={750} bottom="2rem" right="2rem" />
       {expItemData.map((item, i) => (
         <ExperienceItem
           side={i % 2 === 0 ? 'left' : 'right'}

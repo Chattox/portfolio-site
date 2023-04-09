@@ -6,5 +6,6 @@ export const useStyles = createStyles((theme) => ({
       theme.colorScheme === 'light'
         ? theme.fn.rgba(theme.colors.gray[3], 0.75)
         : theme.fn.rgba(theme.colors.gray[9], 0.5),
+    marginLeft: '50%',
   },
 }));
