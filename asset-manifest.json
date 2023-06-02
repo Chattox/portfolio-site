@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.04b8556c.css",
-    "main.js": "/static/js/main.c00f6ce9.js",
+    "main.js": "/static/js/main.25f3d204.js",
     "static/media/rad-face.jpg": "/static/media/rad-face.cc5d38e30b8a90f72fdc.jpg",
     "static/media/helpinghand-logo.png": "/static/media/helpinghand-logo.a1b1a1d26373df1912df.png",
     "static/media/raddle.png": "/static/media/raddle.d26e72c988c26eef95f2.png",
@@ -13,10 +13,10 @@
     "static/media/mazegen.png": "/static/media/mazegen.97577f4593b4f8255663.png",
     "index.html": "/index.html",
     "main.04b8556c.css.map": "/static/css/main.04b8556c.css.map",
-    "main.c00f6ce9.js.map": "/static/js/main.c00f6ce9.js.map"
+    "main.25f3d204.js.map": "/static/js/main.25f3d204.js.map"
   },
   "entrypoints": [
     "static/css/main.04b8556c.css",
-    "static/js/main.c00f6ce9.js"
+    "static/js/main.25f3d204.js"
   ]
 }
