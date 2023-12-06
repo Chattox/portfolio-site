@@ -10,19 +10,19 @@ import {
   Title,
   Tooltip,
   useMantineTheme,
-} from '@mantine/core';
-import { motion } from 'framer-motion';
+} from "@mantine/core";
+import { motion } from "framer-motion";
 import {
   IconBrandGithub,
   IconBrandYoutube,
   IconPlayerPlay,
   IconDeviceWatch,
-} from '@tabler/icons-react';
+} from "@tabler/icons-react";
 
-import { AnimatedButtonWrapper } from '../../../components/AnimatedButtonWrapper';
-import { useStyles } from './index.styles';
-import { getColor } from '../../../utils/getColor';
-import { PortfolioProps } from '../../../content/portfolio/portfolioData';
+import { AnimatedButtonWrapper } from "../../../components/AnimatedButtonWrapper";
+import { useStyles } from "./index.styles";
+import { getColor } from "../../../utils/getColor";
+import { PortfolioProps } from "../../../content/portfolio/portfolioData";
 
 const Icons: Record<string, JSX.Element> = {
   github: <IconBrandGithub size={48} />,
@@ -45,12 +45,14 @@ export const PortfolioCard = ({
 
   return (
     <motion.div whileHover={{ y: -10 }}>
-      <Card shadow="sm" padding="md" radius="md" maw={'16rem'} withBorder>
+      <Card shadow="sm" padding="md" radius="md" maw={"16rem"} withBorder>
         <Card.Section>
           <BackgroundImage
-            src={theme.colorScheme === 'light' ? imgSrc.light : imgSrc.dark}
+            src={theme.colorScheme === "light" ? imgSrc.light : imgSrc.dark}
             className={
-              imageContain ? cx(classes.cardImage, classes.cardImageContain) : classes.cardImage
+              imageContain
+                ? cx(classes.cardImage, classes.cardImageContain)
+                : classes.cardImage
             }
             component={Flex}
             sx={{ backgroundColor: bgColor }}
@@ -63,13 +65,17 @@ export const PortfolioCard = ({
           </BackgroundImage>
         </Card.Section>
         <Title order={2}>{title}</Title>
-        <Text size="sm" color="dimmed" sx={{ height: '4rem' }}>
+        <Text size="sm" color="dimmed" sx={{ height: "5rem" }}>
           {description}
         </Text>
         <Center>
           {links?.map((link) => (
             <AnimatedButtonWrapper>
-              <Tooltip disabled={Boolean(!link.tooltip)} label={link.tooltip} withArrow>
+              <Tooltip
+                disabled={Boolean(!link.tooltip)}
+                label={link.tooltip}
+                withArrow
+              >
                 <a href={link.url} target="_blank" rel="noopener">
                   <ActionIcon size="xl" variant="subtle" color={getColor()}>
                     {Icons[link.icon]}
