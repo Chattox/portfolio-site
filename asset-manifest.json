@@ -1,10 +1,12 @@
 {
   "files": {
     "main.css": "/static/css/main.04b8556c.css",
-    "main.js": "/static/js/main.25f3d204.js",
+    "main.js": "/static/js/main.3808f05d.js",
     "static/media/rad-face.jpg": "/static/media/rad-face.cc5d38e30b8a90f72fdc.jpg",
     "static/media/helpinghand-logo.png": "/static/media/helpinghand-logo.a1b1a1d26373df1912df.png",
+    "static/media/hypedb.png": "/static/media/hypedb.3af48bbb049cbac23d3f.png",
     "static/media/raddle.png": "/static/media/raddle.d26e72c988c26eef95f2.png",
+    "static/media/picam.jpg": "/static/media/picam.d9db4ffa693633468c04.jpg",
     "static/media/slavbot.jpg": "/static/media/slavbot.85a160ed5972341eb4c1.jpg",
     "static/media/portfolio-light.png": "/static/media/portfolio-light.330b273590a7155923f9.png",
     "static/media/football-pools-logo.png": "/static/media/football-pools-logo.4b9834715147e26c764f.png",
@@ -13,10 +15,10 @@
     "static/media/mazegen.png": "/static/media/mazegen.97577f4593b4f8255663.png",
     "index.html": "/index.html",
     "main.04b8556c.css.map": "/static/css/main.04b8556c.css.map",
-    "main.25f3d204.js.map": "/static/js/main.25f3d204.js.map"
+    "main.3808f05d.js.map": "/static/js/main.3808f05d.js.map"
   },
   "entrypoints": [
     "static/css/main.04b8556c.css",
-    "static/js/main.25f3d204.js"
+    "static/js/main.3808f05d.js"
   ]
 }
