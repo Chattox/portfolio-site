@@ -1,0 +1,4 @@
+.scrollButton {
+  color: var(--mantine-scroll-top-gray);
+  margin-left: 50%;
+}

@@ -1,0 +1,16 @@
+.bgImage {
+  height: 33vh;
+}
+
+.text {
+  text-align: left;
+  padding: 16px;
+}
+
+.textContainer {
+  margin: 25px 0 0 0;
+}
+
+.profilePicture {
+  margin: 25px 0 25px 50px;
+}

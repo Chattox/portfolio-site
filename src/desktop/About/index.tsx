@@ -1,9 +1,20 @@
-import { Container, Group, Text, Title, Image, ActionIcon } from '@mantine/core';
-import { IconBrandGithub, IconBrandLinkedin, IconMail } from '@tabler/icons-react';
+import {
+  Container,
+  Group,
+  Text,
+  Title,
+  Image,
+  ActionIcon,
+} from "@mantine/core";
+import {
+  IconBrandGithub,
+  IconBrandLinkedin,
+  IconMail,
+} from "@tabler/icons-react";
 
-import { aboutData } from '../../content/about/aboutData';
-import { useStyles } from './index.styles';
-import { AnimatedButtonWrapper } from '../../components/AnimatedButtonWrapper';
+import { aboutData } from "../../content/about/aboutData";
+import { AnimatedButtonWrapper } from "../../components/AnimatedButtonWrapper";
+import classes from "./About.module.css";
 
 const Icons: Record<string, JSX.Element> = {
   github: <IconBrandGithub size={48} />,
@@ -12,13 +23,10 @@ const Icons: Record<string, JSX.Element> = {
 };
 
 export const About = () => {
-  const { classes } = useStyles();
-
   return (
-    <Group position="left" align="start" spacing="10%">
+    <Group justify="left" align="start" gap="10%">
       <Image
         src={aboutData.image}
-        withPlaceholder
         maw={240}
         radius={120}
         alt="It me"
@@ -37,8 +45,16 @@ export const About = () => {
         <Group>
           {aboutData.contactDetails.map((contact) => (
             <AnimatedButtonWrapper>
-              <a href={contact.url} target="_blank" rel="noopener noreferrer nofollow">
-                <ActionIcon size="xl" variant="outline" color="theme.primaryColor">
+              <a
+                href={contact.url}
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+              >
+                <ActionIcon
+                  size="xl"
+                  variant="outline"
+                  color="theme.primaryColor"
+                >
                   {Icons[contact.icon]}
                 </ActionIcon>
               </a>

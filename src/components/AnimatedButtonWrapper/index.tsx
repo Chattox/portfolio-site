@@ -1,15 +1,7 @@
-import { createStyles } from '@mantine/core';
-import { motion } from 'framer-motion';
-
-const useStyles = createStyles(() => ({
-  animatedButton: {
-    padding: '16px',
-  },
-}));
+import { motion } from "framer-motion";
+import classes from "./AnimatedButtonWrapper.module.css";
 
 export const AnimatedButtonWrapper = ({ ...props }) => {
-  const { classes } = useStyles();
-
   return (
     <motion.div
       whileHover={{ scale: 1.1 }}
